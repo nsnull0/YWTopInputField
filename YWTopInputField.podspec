@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "YWTopInputField"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Story board issue"
     s.requires_arc = true
 
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
     s.platform     = :ios
 
-    s.ios.deployment_target = "10.0"
+    s.ios.deployment_target = "9.0"
 
   s.source       = { :git => "https://github.com/nsnull0/YWTopInputField.git", :tag => "#{s.version}" }
 
