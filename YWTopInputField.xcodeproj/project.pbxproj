@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28570CA3E90DEB75DC44CD6F /* Pods_YWTopInputFieldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DA767EC9023DC7C7CF8000 /* Pods_YWTopInputFieldTests.framework */; };
+		6C8185045FB73618E537F37F /* Pods_YWTopInputField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D079750D5D2BEC1C26B286 /* Pods_YWTopInputField.framework */; };
 		C116AE5F1EFB831F00B3B36F /* YWTopInputField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C116AE551EFB831F00B3B36F /* YWTopInputField.framework */; };
 		C116AE641EFB831F00B3B36F /* YWTopInputFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116AE631EFB831F00B3B36F /* YWTopInputFieldTests.swift */; };
 		C116AE661EFB831F00B3B36F /* YWTopInputField.h in Headers */ = {isa = PBXBuildFile; fileRef = C116AE581EFB831F00B3B36F /* YWTopInputField.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +25,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14D079750D5D2BEC1C26B286 /* Pods_YWTopInputField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YWTopInputField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4841C8F437151C524E180ADF /* Pods-YWTopInputFieldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YWTopInputFieldTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YWTopInputFieldTests/Pods-YWTopInputFieldTests.debug.xcconfig"; sourceTree = "<group>"; };
+		81DA767EC9023DC7C7CF8000 /* Pods_YWTopInputFieldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YWTopInputFieldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CA46A70196BBD8503351BF7 /* Pods-YWTopInputField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YWTopInputField.release.xcconfig"; path = "Pods/Target Support Files/Pods-YWTopInputField/Pods-YWTopInputField.release.xcconfig"; sourceTree = "<group>"; };
+		910A0CED87F90AC041DA6F72 /* Pods-YWTopInputFieldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YWTopInputFieldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YWTopInputFieldTests/Pods-YWTopInputFieldTests.release.xcconfig"; sourceTree = "<group>"; };
+		BD7726A3AEA11907496AA980 /* Pods-YWTopInputField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YWTopInputField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YWTopInputField/Pods-YWTopInputField.debug.xcconfig"; sourceTree = "<group>"; };
 		C116AE551EFB831F00B3B36F /* YWTopInputField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YWTopInputField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C116AE581EFB831F00B3B36F /* YWTopInputField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YWTopInputField.h; sourceTree = "<group>"; };
 		C116AE591EFB831F00B3B36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C8185045FB73618E537F37F /* Pods_YWTopInputField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +53,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				C116AE5F1EFB831F00B3B36F /* YWTopInputField.framework in Frameworks */,
+				28570CA3E90DEB75DC44CD6F /* Pods_YWTopInputFieldTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A151934231F09A7BFFECC7B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD7726A3AEA11907496AA980 /* Pods-YWTopInputField.debug.xcconfig */,
+				8CA46A70196BBD8503351BF7 /* Pods-YWTopInputField.release.xcconfig */,
+				4841C8F437151C524E180ADF /* Pods-YWTopInputFieldTests.debug.xcconfig */,
+				910A0CED87F90AC041DA6F72 /* Pods-YWTopInputFieldTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C116AE4B1EFB831F00B3B36F = {
 			isa = PBXGroup;
 			children = (
 				C116AE571EFB831F00B3B36F /* YWTopInputField */,
 				C116AE621EFB831F00B3B36F /* YWTopInputFieldTests */,
 				C116AE561EFB831F00B3B36F /* Products */,
+				A151934231F09A7BFFECC7B8 /* Pods */,
+				F296492F307FCFAA1E8AE503 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +109,15 @@
 			path = YWTopInputFieldTests;
 			sourceTree = "<group>";
 		};
+		F296492F307FCFAA1E8AE503 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14D079750D5D2BEC1C26B286 /* Pods_YWTopInputField.framework */,
+				81DA767EC9023DC7C7CF8000 /* Pods_YWTopInputFieldTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,10 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C116AE691EFB831F00B3B36F /* Build configuration list for PBXNativeTarget "YWTopInputField" */;
 			buildPhases = (
+				BEEAB5629F64B8FF50441442 /* [CP] Check Pods Manifest.lock */,
 				C116AE501EFB831F00B3B36F /* Sources */,
 				C116AE511EFB831F00B3B36F /* Frameworks */,
 				C116AE521EFB831F00B3B36F /* Headers */,
 				C116AE531EFB831F00B3B36F /* Resources */,
+				2490D86540F67DA08E794C2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C116AE6C1EFB831F00B3B36F /* Build configuration list for PBXNativeTarget "YWTopInputFieldTests" */;
 			buildPhases = (
+				DB1EAFBDC9303C21B298E83B /* [CP] Check Pods Manifest.lock */,
 				C116AE5A1EFB831F00B3B36F /* Sources */,
 				C116AE5B1EFB831F00B3B36F /* Frameworks */,
 				C116AE5C1EFB831F00B3B36F /* Resources */,
+				D304D3EAFC959F722D7929B9 /* [CP] Embed Pods Frameworks */,
+				F37A1D21D2C66A33AB9603B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,6 +229,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2490D86540F67DA08E794C2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YWTopInputField/Pods-YWTopInputField-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEEAB5629F64B8FF50441442 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D304D3EAFC959F722D7929B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YWTopInputFieldTests/Pods-YWTopInputFieldTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB1EAFBDC9303C21B298E83B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F37A1D21D2C66A33AB9603B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YWTopInputFieldTests/Pods-YWTopInputFieldTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C116AE501EFB831F00B3B36F /* Sources */ = {
@@ -323,6 +438,7 @@
 		};
 		C116AE6A1EFB831F00B3B36F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD7726A3AEA11907496AA980 /* Pods-YWTopInputField.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -342,6 +458,7 @@
 		};
 		C116AE6B1EFB831F00B3B36F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CA46A70196BBD8503351BF7 /* Pods-YWTopInputField.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -361,6 +478,7 @@
 		};
 		C116AE6D1EFB831F00B3B36F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4841C8F437151C524E180ADF /* Pods-YWTopInputFieldTests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6PD7BDJUDR;
 				INFOPLIST_FILE = YWTopInputFieldTests/Info.plist;
@@ -373,6 +491,7 @@
 		};
 		C116AE6E1EFB831F00B3B36F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 910A0CED87F90AC041DA6F72 /* Pods-YWTopInputFieldTests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6PD7BDJUDR;
 				INFOPLIST_FILE = YWTopInputFieldTests/Info.plist;

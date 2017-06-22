@@ -1,0 +1,6 @@
+framework module Pods_YWTopInputFieldTests {
+  umbrella header "Pods-YWTopInputFieldTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
