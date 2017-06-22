@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
   s.name         = "YWTopInputField"
   s.version      = "0.0.2"
-  s.summary      = "Initial build with Blur Background"
+  s.summary      = "Story board issue"
     s.requires_arc = true
 
   s.homepage     = "https://github.com/nsnull0/YWTopInputField"
