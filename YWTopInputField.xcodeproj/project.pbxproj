@@ -12,6 +12,11 @@
 		C116AE5F1EFB831F00B3B36F /* YWTopInputField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C116AE551EFB831F00B3B36F /* YWTopInputField.framework */; };
 		C116AE641EFB831F00B3B36F /* YWTopInputFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116AE631EFB831F00B3B36F /* YWTopInputFieldTests.swift */; };
 		C116AE661EFB831F00B3B36F /* YWTopInputField.h in Headers */ = {isa = PBXBuildFile; fileRef = C116AE581EFB831F00B3B36F /* YWTopInputField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C116AE721EFB882700B3B36F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C116AE711EFB882700B3B36F /* Main.storyboard */; };
+		C116AE751EFB88AF00B3B36F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C116AE741EFB88AF00B3B36F /* Images.xcassets */; };
+		C116AE781EFB89E500B3B36F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116AE771EFB89E500B3B36F /* AppDelegate.swift */; };
+		C116AE7A1EFB8B6F00B3B36F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C116AE791EFB8B6F00B3B36F /* LaunchScreen.storyboard */; };
+		C116AE7F1EFB8F0500B3B36F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C116AE7E1EFB8F0500B3B36F /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +38,16 @@
 		BD7726A3AEA11907496AA980 /* Pods-YWTopInputField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YWTopInputField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YWTopInputField/Pods-YWTopInputField.debug.xcconfig"; sourceTree = "<group>"; };
 		C116AE551EFB831F00B3B36F /* YWTopInputField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YWTopInputField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C116AE581EFB831F00B3B36F /* YWTopInputField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YWTopInputField.h; sourceTree = "<group>"; };
-		C116AE591EFB831F00B3B36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C116AE5E1EFB831F00B3B36F /* YWTopInputFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YWTopInputFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C116AE631EFB831F00B3B36F /* YWTopInputFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWTopInputFieldTests.swift; sourceTree = "<group>"; };
 		C116AE651EFB831F00B3B36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C116AE711EFB882700B3B36F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Views/Storyboard/Main.storyboard; sourceTree = "<group>"; };
+		C116AE741EFB88AF00B3B36F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
+		C116AE771EFB89E500B3B36F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Controllers/AppDelegate.swift; sourceTree = "<group>"; };
+		C116AE791EFB8B6F00B3B36F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Views/Storyboard/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C116AE7C1EFB8CAA00B3B36F /* YWTopInputField-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YWTopInputField-Bridging-Header.h"; sourceTree = "<group>"; };
+		C116AE7D1EFB8E7800B3B36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C116AE7E1EFB8F0500B3B36F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SupportingFiles/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				C116AE581EFB831F00B3B36F /* YWTopInputField.h */,
-				C116AE591EFB831F00B3B36F /* Info.plist */,
+				C116AE7D1EFB8E7800B3B36F /* Info.plist */,
+				C116AE7B1EFB8B8F00B3B36F /* Supporting Files */,
+				C116AE761EFB896D00B3B36F /* Controllers */,
+				C116AE731EFB888500B3B36F /* Resources */,
+				C116AE6F1EFB87C900B3B36F /* Views */,
 			);
 			path = YWTopInputField;
 			sourceTree = "<group>";
@@ -107,6 +122,48 @@
 				C116AE651EFB831F00B3B36F /* Info.plist */,
 			);
 			path = YWTopInputFieldTests;
+			sourceTree = "<group>";
+		};
+		C116AE6F1EFB87C900B3B36F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C116AE701EFB87E900B3B36F /* Storyboards & Nibs */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C116AE701EFB87E900B3B36F /* Storyboards & Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				C116AE711EFB882700B3B36F /* Main.storyboard */,
+				C116AE791EFB8B6F00B3B36F /* LaunchScreen.storyboard */,
+			);
+			name = "Storyboards & Nibs";
+			sourceTree = "<group>";
+		};
+		C116AE731EFB888500B3B36F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C116AE741EFB88AF00B3B36F /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C116AE761EFB896D00B3B36F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C116AE771EFB89E500B3B36F /* AppDelegate.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C116AE7B1EFB8B8F00B3B36F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C116AE7C1EFB8CAA00B3B36F /* YWTopInputField-Bridging-Header.h */,
+				C116AE7E1EFB8F0500B3B36F /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F296492F307FCFAA1E8AE503 /* Frameworks */ = {
@@ -186,6 +243,7 @@
 					C116AE541EFB831F00B3B36F = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 6PD7BDJUDR;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					C116AE5D1EFB831F00B3B36F = {
@@ -218,6 +276,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C116AE7F1EFB8F0500B3B36F /* Info.plist in Resources */,
+				C116AE7A1EFB8B6F00B3B36F /* LaunchScreen.storyboard in Resources */,
+				C116AE721EFB882700B3B36F /* Main.storyboard in Resources */,
+				C116AE751EFB88AF00B3B36F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C116AE781EFB89E500B3B36F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BD7726A3AEA11907496AA980 /* Pods-YWTopInputField.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6PD7BDJUDR;
@@ -452,6 +516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Me.Self.YWTopInputField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -460,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8CA46A70196BBD8503351BF7 /* Pods-YWTopInputField.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6PD7BDJUDR;
@@ -480,6 +546,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4841C8F437151C524E180ADF /* Pods-YWTopInputFieldTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6PD7BDJUDR;
 				INFOPLIST_FILE = YWTopInputFieldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -493,6 +560,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 910A0CED87F90AC041DA6F72 /* Pods-YWTopInputFieldTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6PD7BDJUDR;
 				INFOPLIST_FILE = YWTopInputFieldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -521,6 +589,7 @@
 				C116AE6B1EFB831F00B3B36F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C116AE6C1EFB831F00B3B36F /* Build configuration list for PBXNativeTarget "YWTopInputFieldTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +598,7 @@
 				C116AE6E1EFB831F00B3B36F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
