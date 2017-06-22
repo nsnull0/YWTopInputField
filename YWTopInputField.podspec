@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "YWTopInputField"
-  s.version      = "1.0"
+  s.version      = "0.0.1"
   s.summary      = "Initial build with Blur Background"
     s.requires_arc = true
 
