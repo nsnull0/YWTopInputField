@@ -17,6 +17,7 @@
 		C116AE781EFB89E500B3B36F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116AE771EFB89E500B3B36F /* AppDelegate.swift */; };
 		C116AE7A1EFB8B6F00B3B36F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C116AE791EFB8B6F00B3B36F /* LaunchScreen.storyboard */; };
 		C116AE7F1EFB8F0500B3B36F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C116AE7E1EFB8F0500B3B36F /* Info.plist */; };
+		C116AE811EFBC57300B3B36F /* TopInputFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116AE801EFBC57300B3B36F /* TopInputFieldController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		C116AE7C1EFB8CAA00B3B36F /* YWTopInputField-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YWTopInputField-Bridging-Header.h"; sourceTree = "<group>"; };
 		C116AE7D1EFB8E7800B3B36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C116AE7E1EFB8F0500B3B36F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SupportingFiles/Info.plist; sourceTree = "<group>"; };
+		C116AE801EFBC57300B3B36F /* TopInputFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopInputFieldController.swift; path = Controllers/TopInputFieldController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				C116AE771EFB89E500B3B36F /* AppDelegate.swift */,
+				C116AE801EFBC57300B3B36F /* TopInputFieldController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C116AE781EFB89E500B3B36F /* AppDelegate.swift in Sources */,
+				C116AE811EFBC57300B3B36F /* TopInputFieldController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
