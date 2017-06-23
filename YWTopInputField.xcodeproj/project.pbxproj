@@ -12,6 +12,8 @@
 		C116AE5F1EFB831F00B3B36F /* YWTopInputField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C116AE551EFB831F00B3B36F /* YWTopInputField.framework */; };
 		C116AE641EFB831F00B3B36F /* YWTopInputFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116AE631EFB831F00B3B36F /* YWTopInputFieldTests.swift */; };
 		C116AE661EFB831F00B3B36F /* YWTopInputField.h in Headers */ = {isa = PBXBuildFile; fileRef = C116AE581EFB831F00B3B36F /* YWTopInputField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C116AF361EFD9CE400B3B36F /* YWTopInputFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116AF351EFD9CE400B3B36F /* YWTopInputFieldController.swift */; };
+		C116AF391EFD9D4700B3B36F /* YWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C116AF381EFD9D4700B3B36F /* YWMain.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		C116AE631EFB831F00B3B36F /* YWTopInputFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWTopInputFieldTests.swift; sourceTree = "<group>"; };
 		C116AE651EFB831F00B3B36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C116AE7D1EFB8E7800B3B36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C116AF351EFD9CE400B3B36F /* YWTopInputFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YWTopInputFieldController.swift; path = Classes/YWTopInputFieldController.swift; sourceTree = "<group>"; };
+		C116AF381EFD9D4700B3B36F /* YWMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = YWMain.storyboard; path = Resources/YWMain.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			children = (
 				C116AE581EFB831F00B3B36F /* YWTopInputField.h */,
 				C116AE7D1EFB8E7800B3B36F /* Info.plist */,
+				C116AF3A1EFD9D5600B3B36F /* Resources */,
 				C116AE761EFB896D00B3B36F /* Classes */,
 			);
 			path = YWTopInputField;
@@ -113,8 +118,25 @@
 		C116AE761EFB896D00B3B36F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C116AF371EFD9CEA00B3B36F /* Controller */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		C116AF371EFD9CEA00B3B36F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C116AF351EFD9CE400B3B36F /* YWTopInputFieldController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C116AF3A1EFD9D5600B3B36F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C116AF381EFD9D4700B3B36F /* YWMain.storyboard */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		F296492F307FCFAA1E8AE503 /* Frameworks */ = {
@@ -227,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C116AF391EFD9D4700B3B36F /* YWMain.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C116AF361EFD9CE400B3B36F /* YWTopInputFieldController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4841C8F437151C524E180ADF /* Pods-YWTopInputFieldTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6PD7BDJUDR;
 				INFOPLIST_FILE = YWTopInputFieldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -505,6 +530,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 910A0CED87F90AC041DA6F72 /* Pods-YWTopInputFieldTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6PD7BDJUDR;
 				INFOPLIST_FILE = YWTopInputFieldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
