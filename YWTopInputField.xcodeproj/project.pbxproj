@@ -12,12 +12,6 @@
 		C116AE5F1EFB831F00B3B36F /* YWTopInputField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C116AE551EFB831F00B3B36F /* YWTopInputField.framework */; };
 		C116AE641EFB831F00B3B36F /* YWTopInputFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116AE631EFB831F00B3B36F /* YWTopInputFieldTests.swift */; };
 		C116AE661EFB831F00B3B36F /* YWTopInputField.h in Headers */ = {isa = PBXBuildFile; fileRef = C116AE581EFB831F00B3B36F /* YWTopInputField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C116AE721EFB882700B3B36F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C116AE711EFB882700B3B36F /* Main.storyboard */; };
-		C116AE751EFB88AF00B3B36F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C116AE741EFB88AF00B3B36F /* Images.xcassets */; };
-		C116AE781EFB89E500B3B36F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116AE771EFB89E500B3B36F /* AppDelegate.swift */; };
-		C116AE7A1EFB8B6F00B3B36F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C116AE791EFB8B6F00B3B36F /* LaunchScreen.storyboard */; };
-		C116AE7F1EFB8F0500B3B36F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C116AE7E1EFB8F0500B3B36F /* Info.plist */; };
-		C116AE811EFBC57300B3B36F /* TopInputFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116AE801EFBC57300B3B36F /* TopInputFieldController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,14 +36,7 @@
 		C116AE5E1EFB831F00B3B36F /* YWTopInputFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YWTopInputFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C116AE631EFB831F00B3B36F /* YWTopInputFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWTopInputFieldTests.swift; sourceTree = "<group>"; };
 		C116AE651EFB831F00B3B36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C116AE711EFB882700B3B36F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Views/Storyboard/Main.storyboard; sourceTree = "<group>"; };
-		C116AE741EFB88AF00B3B36F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
-		C116AE771EFB89E500B3B36F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Controllers/AppDelegate.swift; sourceTree = "<group>"; };
-		C116AE791EFB8B6F00B3B36F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Views/Storyboard/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C116AE7C1EFB8CAA00B3B36F /* YWTopInputField-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YWTopInputField-Bridging-Header.h"; sourceTree = "<group>"; };
 		C116AE7D1EFB8E7800B3B36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C116AE7E1EFB8F0500B3B36F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SupportingFiles/Info.plist; sourceTree = "<group>"; };
-		C116AE801EFBC57300B3B36F /* TopInputFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopInputFieldController.swift; path = Controllers/TopInputFieldController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +96,7 @@
 			children = (
 				C116AE581EFB831F00B3B36F /* YWTopInputField.h */,
 				C116AE7D1EFB8E7800B3B36F /* Info.plist */,
-				C116AE7B1EFB8B8F00B3B36F /* Supporting Files */,
-				C116AE761EFB896D00B3B36F /* Controllers */,
-				C116AE731EFB888500B3B36F /* Resources */,
-				C116AE6F1EFB87C900B3B36F /* Views */,
+				C116AE761EFB896D00B3B36F /* Classes */,
 			);
 			path = YWTopInputField;
 			sourceTree = "<group>";
@@ -126,47 +110,11 @@
 			path = YWTopInputFieldTests;
 			sourceTree = "<group>";
 		};
-		C116AE6F1EFB87C900B3B36F /* Views */ = {
+		C116AE761EFB896D00B3B36F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C116AE701EFB87E900B3B36F /* Storyboards & Nibs */,
 			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		C116AE701EFB87E900B3B36F /* Storyboards & Nibs */ = {
-			isa = PBXGroup;
-			children = (
-				C116AE711EFB882700B3B36F /* Main.storyboard */,
-				C116AE791EFB8B6F00B3B36F /* LaunchScreen.storyboard */,
-			);
-			name = "Storyboards & Nibs";
-			sourceTree = "<group>";
-		};
-		C116AE731EFB888500B3B36F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C116AE741EFB88AF00B3B36F /* Images.xcassets */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		C116AE761EFB896D00B3B36F /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				C116AE771EFB89E500B3B36F /* AppDelegate.swift */,
-				C116AE801EFBC57300B3B36F /* TopInputFieldController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		C116AE7B1EFB8B8F00B3B36F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C116AE7C1EFB8CAA00B3B36F /* YWTopInputField-Bridging-Header.h */,
-				C116AE7E1EFB8F0500B3B36F /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		F296492F307FCFAA1E8AE503 /* Frameworks */ = {
@@ -279,10 +227,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C116AE7F1EFB8F0500B3B36F /* Info.plist in Resources */,
-				C116AE7A1EFB8B6F00B3B36F /* LaunchScreen.storyboard in Resources */,
-				C116AE721EFB882700B3B36F /* Main.storyboard in Resources */,
-				C116AE751EFB88AF00B3B36F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,8 +322,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C116AE781EFB89E500B3B36F /* AppDelegate.swift in Sources */,
-				C116AE811EFBC57300B3B36F /* TopInputFieldController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,7 +492,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4841C8F437151C524E180ADF /* Pods-YWTopInputFieldTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6PD7BDJUDR;
 				INFOPLIST_FILE = YWTopInputFieldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -564,7 +505,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 910A0CED87F90AC041DA6F72 /* Pods-YWTopInputFieldTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6PD7BDJUDR;
 				INFOPLIST_FILE = YWTopInputFieldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
