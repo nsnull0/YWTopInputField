@@ -58,6 +58,9 @@
 		C116AF211EFD8F4200B3B36F /* YWTestInputFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YWTestInputFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C116AF251EFD8F4200B3B36F /* YWTestInputFieldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YWTestInputFieldUITests.swift; sourceTree = "<group>"; };
 		C116AF271EFD8F4200B3B36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C13D421F1EFE5C1B0074A7A7 /* YWTopInputField.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = YWTopInputField.podspec; path = ../../YWTopInputField.podspec; sourceTree = "<group>"; };
+		C13D42201EFE5CAA0074A7A7 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
+		C13D42211EFE5CB40074A7A7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		F73197A4E3B44FEF36D36EB1 /* Pods-YWTestInputFieldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YWTestInputFieldUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YWTestInputFieldUITests/Pods-YWTestInputFieldUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +105,9 @@
 		C116AEF91EFD8F4200B3B36F = {
 			isa = PBXGroup;
 			children = (
+				C13D421F1EFE5C1B0074A7A7 /* YWTopInputField.podspec */,
+				C13D42201EFE5CAA0074A7A7 /* LICENSE */,
+				C13D42211EFE5CB40074A7A7 /* README.md */,
 				C116AF041EFD8F4200B3B36F /* YWTestInputField */,
 				C116AF191EFD8F4200B3B36F /* YWTestInputFieldTests */,
 				C116AF241EFD8F4200B3B36F /* YWTestInputFieldUITests */,
