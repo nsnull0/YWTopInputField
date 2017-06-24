@@ -40,6 +40,15 @@ public class YWTopInputFieldController: UIViewController {
     }
 
     
+    required public init() {
+        let bundle = Bundle(for: YWTopInputFieldController.self)
+        super.init(nibName: nil, bundle: bundle)
+        
+        
+        
+        
+    }
+    
     
     //MARK: Animation and Interface
     public func showInput(){

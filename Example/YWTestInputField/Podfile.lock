@@ -4,12 +4,16 @@ PODS:
     - SnapKit
 
 DEPENDENCIES:
-  - YWTopInputField
+  - YWTopInputField (from `~/Documents/Github/YWTopInputField`)
+
+EXTERNAL SOURCES:
+  YWTopInputField:
+    :path: "~/Documents/Github/YWTopInputField"
 
 SPEC CHECKSUMS:
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
-  YWTopInputField: b99772806a78e6fa90a4cde24707e8e4bc2575e0
+  YWTopInputField: 613a1cc0280cef21c2aa3b178da5bc560f49d75b
 
-PODFILE CHECKSUM: 2c23ca427f520d96e6a60ec4d608127dd64b8eb0
+PODFILE CHECKSUM: 275d5470268c398eeba87b2c0f70c8bbeb9a4427
 
 COCOAPODS: 1.1.1

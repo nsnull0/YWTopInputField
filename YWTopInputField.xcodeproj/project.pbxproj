@@ -12,8 +12,11 @@
 		C116AE5F1EFB831F00B3B36F /* YWTopInputField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C116AE551EFB831F00B3B36F /* YWTopInputField.framework */; };
 		C116AE641EFB831F00B3B36F /* YWTopInputFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116AE631EFB831F00B3B36F /* YWTopInputFieldTests.swift */; };
 		C116AF361EFD9CE400B3B36F /* YWTopInputFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116AF351EFD9CE400B3B36F /* YWTopInputFieldController.swift */; };
-		C116AF391EFD9D4700B3B36F /* YWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C116AF381EFD9D4700B3B36F /* YWMain.storyboard */; };
 		C13D421E1EFE57710074A7A7 /* YWInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D421D1EFE57710074A7A7 /* YWInputProtocol.swift */; };
+		C13D42241EFE8F7D0074A7A7 /* YWMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C13D42231EFE8F7D0074A7A7 /* YWMainView.xib */; };
+		C13D42271EFE91EC0074A7A7 /* YWExtension++.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D42261EFE91EC0074A7A7 /* YWExtension++.swift */; };
+		C13D422A1EFED9030074A7A7 /* YWTopInputFieldLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D42291EFED9030074A7A7 /* YWTopInputFieldLogic.swift */; };
+		C13D422C1EFED9A50074A7A7 /* YWTopInputFieldUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D422B1EFED9A50074A7A7 /* YWTopInputFieldUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +42,11 @@
 		C116AE651EFB831F00B3B36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C116AE7D1EFB8E7800B3B36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C116AF351EFD9CE400B3B36F /* YWTopInputFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YWTopInputFieldController.swift; path = Classes/YWTopInputFieldController.swift; sourceTree = "<group>"; };
-		C116AF381EFD9D4700B3B36F /* YWMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = YWMain.storyboard; path = Resources/YWMain.storyboard; sourceTree = "<group>"; };
 		C13D421D1EFE57710074A7A7 /* YWInputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YWInputProtocol.swift; path = Classes/YWInputProtocol.swift; sourceTree = "<group>"; };
+		C13D42231EFE8F7D0074A7A7 /* YWMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YWMainView.xib; path = Resources/YWMainView.xib; sourceTree = "<group>"; };
+		C13D42261EFE91EC0074A7A7 /* YWExtension++.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "YWExtension++.swift"; path = "Classes/YWExtension++.swift"; sourceTree = "<group>"; };
+		C13D42291EFED9030074A7A7 /* YWTopInputFieldLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YWTopInputFieldLogic.swift; path = Classes/YWTopInputFieldLogic.swift; sourceTree = "<group>"; };
+		C13D422B1EFED9A50074A7A7 /* YWTopInputFieldUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YWTopInputFieldUtility.swift; path = Classes/YWTopInputFieldUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,8 @@
 		C116AE761EFB896D00B3B36F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C13D42281EFECCCA0074A7A7 /* New Group */,
+				C13D42251EFE91BD0074A7A7 /* Extension */,
 				C13D421C1EFE57360074A7A7 /* Protocol */,
 				C116AF371EFD9CEA00B3B36F /* Controller */,
 			);
@@ -127,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				C116AF351EFD9CE400B3B36F /* YWTopInputFieldController.swift */,
+				C13D42291EFED9030074A7A7 /* YWTopInputFieldLogic.swift */,
+				C13D422B1EFED9A50074A7A7 /* YWTopInputFieldUtility.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -134,7 +144,7 @@
 		C116AF3A1EFD9D5600B3B36F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C116AF381EFD9D4700B3B36F /* YWMain.storyboard */,
+				C13D42231EFE8F7D0074A7A7 /* YWMainView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -145,6 +155,21 @@
 				C13D421D1EFE57710074A7A7 /* YWInputProtocol.swift */,
 			);
 			name = Protocol;
+			sourceTree = "<group>";
+		};
+		C13D42251EFE91BD0074A7A7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C13D42261EFE91EC0074A7A7 /* YWExtension++.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		C13D42281EFECCCA0074A7A7 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		F296492F307FCFAA1E8AE503 /* Frameworks */ = {
@@ -256,7 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C116AF391EFD9D4700B3B36F /* YWMain.storyboard in Resources */,
+				C13D42241EFE8F7D0074A7A7 /* YWMainView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +379,9 @@
 			files = (
 				C13D421E1EFE57710074A7A7 /* YWInputProtocol.swift in Sources */,
 				C116AF361EFD9CE400B3B36F /* YWTopInputFieldController.swift in Sources */,
+				C13D422A1EFED9030074A7A7 /* YWTopInputFieldLogic.swift in Sources */,
+				C13D42271EFE91EC0074A7A7 /* YWExtension++.swift in Sources */,
+				C13D422C1EFED9A50074A7A7 /* YWTopInputFieldUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

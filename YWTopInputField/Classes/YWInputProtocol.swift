@@ -12,4 +12,5 @@ public protocol YWInputProtocol: class {
     
     func doneAction(resultStr: String)
     
+    func didShowYWInputField()
 }

@@ -14,25 +14,15 @@ class ViewController: UIViewController, YWInputProtocol {
     
     var alert:YWTopInputFieldController?
     
+    @IBOutlet weak var inputText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        let bundle = Bundle(for: YWTopInputFieldController.self)
-        let storyBoard = UIStoryboard(name: "YWMain", bundle: bundle)
         
-        alert = storyBoard.instantiateInitialViewController() as? YWTopInputFieldController
+        alert = YWTopInputFieldController(_contentController: self, _withInput: self.inputText, _andDelegate: self)
         
-        self.didMove(toParentViewController: alert)
-        alert!.view.backgroundColor = UIColor.clear
-        self.view.addSubview(alert!.view)
         
-        self.perform(#selector(test), with: self, afterDelay: 1)
         
-    }
-
-    @objc func test(){
-        alert!.showInput()
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,5 +33,11 @@ class ViewController: UIViewController, YWInputProtocol {
     func doneAction(resultStr: String) {
         
     }
+    
+    func didShowYWInputField() {
+        alert!.showInput(_withTitle: "Information Detail", _andMessage: "", completion: {
+            (finished) in
+        })
+    }
+    
 }
-
