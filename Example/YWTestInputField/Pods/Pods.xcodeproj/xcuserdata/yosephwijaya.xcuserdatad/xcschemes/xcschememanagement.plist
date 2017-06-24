@@ -19,10 +19,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SnapKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YWTopInputField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>74D6150F02BC75960D8329A964B16536</key>
+		<key>160BD0E7C5B1C55A6B2C40F7EDCB4967</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77900688E6FE86AC8796F82AEC68B161</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -33,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>92F9BB0211D6237987E0700E838A53B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF58D9E2932EE2D260B75C64E570C3A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

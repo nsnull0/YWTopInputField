@@ -610,6 +610,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6A856205BC234C6C0682A277 /* Pods-YWTestInputField.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6PD7BDJUDR;
 				INFOPLIST_FILE = YWTestInputField/Info.plist;
@@ -624,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1B2639187E98F19F4173F1B7 /* Pods-YWTestInputField.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6PD7BDJUDR;
 				INFOPLIST_FILE = YWTestInputField/Info.plist;

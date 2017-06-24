@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1kq-hh-iOJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Top Input Field Controller-->
+        <scene sceneID="4Es-Hu-5U5">
+            <objects>
+                <viewController storyboardIdentifier="YWTopInputFieldController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1kq-hh-iOJ" customClass="YWTopInputFieldController" customModule="YWTopInputField" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TbY-of-Fr6"/>
+                        <viewControllerLayoutGuide type="bottom" id="paA-bH-kGC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DvN-9w-DW6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psp-pQ-fFH">
+                                <rect key="frame" x="0.0" y="-150" width="375" height="150"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iSm-oe-YKR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="tu6-Oq-Clm"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="psp-pQ-fFH" firstAttribute="leading" secondItem="DvN-9w-DW6" secondAttribute="leading" id="9Mb-A0-7Ja"/>
+                            <constraint firstAttribute="trailing" secondItem="psp-pQ-fFH" secondAttribute="trailing" id="BUZ-eY-fAk"/>
+                            <constraint firstItem="psp-pQ-fFH" firstAttribute="top" secondItem="DvN-9w-DW6" secondAttribute="top" constant="-150" id="exn-Tj-7oe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerBlur" destination="psp-pQ-fFH" id="kco-vN-ADj"/>
+                        <outlet property="topContainerBlurConstraint" destination="exn-Tj-7oe" id="L9O-OQ-IbD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Stm-7f-qPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="151.57421289355324"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,6 @@
+framework module YWTopInputField {
+  umbrella header "YWTopInputField-umbrella.h"
+
+  export *
+  module * { export * }
+}
