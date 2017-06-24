@@ -13,6 +13,7 @@
 		C116AE641EFB831F00B3B36F /* YWTopInputFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116AE631EFB831F00B3B36F /* YWTopInputFieldTests.swift */; };
 		C116AF361EFD9CE400B3B36F /* YWTopInputFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C116AF351EFD9CE400B3B36F /* YWTopInputFieldController.swift */; };
 		C116AF391EFD9D4700B3B36F /* YWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C116AF381EFD9D4700B3B36F /* YWMain.storyboard */; };
+		C13D421E1EFE57710074A7A7 /* YWInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D421D1EFE57710074A7A7 /* YWInputProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		C116AE7D1EFB8E7800B3B36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C116AF351EFD9CE400B3B36F /* YWTopInputFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YWTopInputFieldController.swift; path = Classes/YWTopInputFieldController.swift; sourceTree = "<group>"; };
 		C116AF381EFD9D4700B3B36F /* YWMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = YWMain.storyboard; path = Resources/YWMain.storyboard; sourceTree = "<group>"; };
+		C13D421D1EFE57710074A7A7 /* YWInputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YWInputProtocol.swift; path = Classes/YWInputProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		C116AE761EFB896D00B3B36F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C13D421C1EFE57360074A7A7 /* Protocol */,
 				C116AF371EFD9CEA00B3B36F /* Controller */,
 			);
 			name = Classes;
@@ -134,6 +137,14 @@
 				C116AF381EFD9D4700B3B36F /* YWMain.storyboard */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		C13D421C1EFE57360074A7A7 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C13D421D1EFE57710074A7A7 /* YWInputProtocol.swift */,
+			);
+			name = Protocol;
 			sourceTree = "<group>";
 		};
 		F296492F307FCFAA1E8AE503 /* Frameworks */ = {
@@ -341,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C13D421E1EFE57710074A7A7 /* YWInputProtocol.swift in Sources */,
 				C116AF361EFD9CE400B3B36F /* YWTopInputFieldController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

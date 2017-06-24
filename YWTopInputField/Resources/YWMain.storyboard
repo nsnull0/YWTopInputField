@@ -20,23 +20,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPH-h4-5sV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psp-pQ-fFH">
+                                <rect key="frame" x="0.0" y="-150" width="375" height="150"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iSm-oe-YKR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="zOI-5k-jHy"/>
+                                    <constraint firstAttribute="height" constant="150" id="tu6-Oq-Clm"/>
                                 </constraints>
-                            </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uPH-h4-5sV" firstAttribute="top" secondItem="DvN-9w-DW6" secondAttribute="top" id="I6I-D2-QdU"/>
-                            <constraint firstAttribute="trailing" secondItem="uPH-h4-5sV" secondAttribute="trailing" id="XTG-DK-wVx"/>
-                            <constraint firstItem="uPH-h4-5sV" firstAttribute="leading" secondItem="DvN-9w-DW6" secondAttribute="leading" id="dPs-zB-SQ1"/>
+                            <constraint firstItem="psp-pQ-fFH" firstAttribute="leading" secondItem="DvN-9w-DW6" secondAttribute="leading" id="9Mb-A0-7Ja"/>
+                            <constraint firstAttribute="trailing" secondItem="psp-pQ-fFH" secondAttribute="trailing" id="BUZ-eY-fAk"/>
+                            <constraint firstItem="psp-pQ-fFH" firstAttribute="top" secondItem="DvN-9w-DW6" secondAttribute="top" constant="-150" id="exn-Tj-7oe"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="TempView" destination="uPH-h4-5sV" id="bDd-X7-Z85"/>
+                        <outlet property="containerBlur" destination="psp-pQ-fFH" id="kco-vN-ADj"/>
+                        <outlet property="topContainerBlurConstraint" destination="exn-Tj-7oe" id="L9O-OQ-IbD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Stm-7f-qPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
