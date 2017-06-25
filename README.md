@@ -12,7 +12,35 @@ Will be more generic day by day
 #### ⚠️ **This Library only Available to Swift > 3.0** ⚠️
 
 
-## Usage
+## Installation
+
+### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+```ruby
+platform :ios, '9.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+    pod 'YWTopInputField'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+
+## Dependency
+- This library use SnapKit V3.2.0 resources from http://snapkit.io (Thanks to them, I can make the interface easier)
+
 ## Initialization
 ```swift
 import YWTopInputField
@@ -71,6 +99,7 @@ extension ViewController:UITextFieldDelegate{
 
 ## Credits
 - Yoseph Wijaya Savianto ([@yosephwijaya](http://yoseph.ws))
+- SnapKit Team ([@SnapKit](http://snapkit.io))
 
 ## License
 - nsnull0/YWTopInputField is licensed under MIT LICENSE
