@@ -6,10 +6,11 @@
 
 Make your input value more  userfriendly with easy implementation.
 
+Will be more generic day by day
 
-Currently still on development
+## Availability
+#### ⚠️ **This Library only Available to Swift > 3.0** ⚠️
 
-To Try Example using UITextfield(For Now): (For Generic type still in progress)
 
 ## Usage
 ## Initialization
@@ -60,6 +61,9 @@ extension ViewController:UITextFieldDelegate{
 }
 
 ```
+## Support
+- Updated Everyday for more Generic and developer-friendly
+- leave comment or message me if you guys have wonderful ideas about this library.
 
 ## Credits
 - Yoseph Wijaya Savianto ([@yosephwijaya](http://yoseph.ws))
