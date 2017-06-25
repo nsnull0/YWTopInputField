@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YWTopInputFieldController" customModule="YWTopInputField" customModuleProvider="target">
             <connections>
                 <outlet property="containerBlur" destination="29C-b5-vWU" id="WY3-Mg-KMI"/>
-                <outlet property="inputTextContainerYW" destination="CHw-1E-ebt" id="9V0-0W-W7a"/>
+                <outlet property="inputTextContainerYW" destination="mED-c4-V9I" id="fbd-Fi-e1n"/>
                 <outlet property="messageLabelYW" destination="zAV-nJ-kZV" id="MpK-Q2-g65"/>
                 <outlet property="titleLabelYW" destination="FJB-lp-TBK" id="ohR-J4-b09"/>
                 <outlet property="topContainerBlurConstraint" destination="VBz-69-0n1" id="kPY-oh-omZ"/>
@@ -85,15 +85,6 @@
                                     <constraint firstItem="84w-x0-nf8" firstAttribute="centerY" secondItem="dja-ae-Mvm" secondAttribute="centerY" id="luv-bO-6XL"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CHw-1E-ebt">
-                                <rect key="frame" x="8" y="171" width="359" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="W8W-jC-X0q"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input your text below instead of scrolling around, Enjoy YWTopInputField" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zAV-nJ-kZV">
                                 <rect key="frame" x="8" y="53" width="359" height="36"/>
                                 <constraints>
@@ -103,20 +94,29 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mED-c4-V9I">
+                                <rect key="frame" x="8" y="151" width="359" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="EDz-8n-TzR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
+                            </textView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="dja-ae-Mvm" firstAttribute="top" secondItem="mED-c4-V9I" secondAttribute="bottom" constant="8" id="4E7-ej-K2f"/>
+                            <constraint firstAttribute="trailing" secondItem="mED-c4-V9I" secondAttribute="trailing" constant="8" id="CBc-LW-fTa"/>
                             <constraint firstItem="zAV-nJ-kZV" firstAttribute="leading" secondItem="CcS-fA-TVl" secondAttribute="leading" constant="8" id="EvT-5O-Jp8"/>
                             <constraint firstItem="zAV-nJ-kZV" firstAttribute="top" secondItem="FJB-lp-TBK" secondAttribute="bottom" constant="8" id="FDA-Ql-DDB"/>
                             <constraint firstAttribute="bottom" secondItem="dja-ae-Mvm" secondAttribute="bottom" constant="8" id="FEF-l8-lya"/>
                             <constraint firstAttribute="trailing" secondItem="zAV-nJ-kZV" secondAttribute="trailing" constant="8" id="Jvz-mZ-HDa"/>
-                            <constraint firstItem="CHw-1E-ebt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zAV-nJ-kZV" secondAttribute="bottom" constant="8" id="NHc-Qy-oBR"/>
+                            <constraint firstItem="mED-c4-V9I" firstAttribute="leading" secondItem="CcS-fA-TVl" secondAttribute="leading" constant="8" id="OcP-jT-nAK"/>
+                            <constraint firstItem="mED-c4-V9I" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zAV-nJ-kZV" secondAttribute="bottom" constant="8" id="OnE-bb-grF"/>
                             <constraint firstAttribute="trailing" secondItem="dja-ae-Mvm" secondAttribute="trailing" constant="8" id="RZV-mj-mKY"/>
-                            <constraint firstAttribute="trailing" secondItem="CHw-1E-ebt" secondAttribute="trailing" constant="8" id="TL5-nN-MaP"/>
                             <constraint firstItem="FJB-lp-TBK" firstAttribute="top" secondItem="CcS-fA-TVl" secondAttribute="top" constant="25" id="ixt-fb-IiJ"/>
                             <constraint firstItem="FJB-lp-TBK" firstAttribute="leading" secondItem="CcS-fA-TVl" secondAttribute="leading" constant="8" id="lKU-CD-3qc"/>
-                            <constraint firstItem="dja-ae-Mvm" firstAttribute="top" secondItem="CHw-1E-ebt" secondAttribute="bottom" constant="8" id="le7-Xj-Ith"/>
                             <constraint firstItem="dja-ae-Mvm" firstAttribute="leading" secondItem="CcS-fA-TVl" secondAttribute="leading" constant="8" id="sdO-n9-eX2"/>
-                            <constraint firstItem="CHw-1E-ebt" firstAttribute="leading" secondItem="CcS-fA-TVl" secondAttribute="leading" constant="8" id="uW8-t2-zJZ"/>
                             <constraint firstAttribute="trailing" secondItem="FJB-lp-TBK" secondAttribute="trailing" constant="8" id="x5t-3t-Frz"/>
                         </constraints>
                     </view>

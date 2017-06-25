@@ -19,9 +19,9 @@ class ViewController: UIViewController, YWInputProtocol {
         super.viewDidLoad()
         
         
-        alert = YWTopInputFieldController(_contentController: self, _withInput: self.inputText, _andDelegate: self)
+        alert = YWTopInputFieldController(_contentController: self, _andDelegate: self)
         
-        
+        inputText.delegate = self
         
     }
     
@@ -35,9 +35,26 @@ class ViewController: UIViewController, YWInputProtocol {
     }
     
     func didShowYWInputField() {
-        alert!.showInput(_withTitle: "Information Detail", _andMessage: "", completion: {
-            (finished) in
-        })
+        
     }
     
+    func didDismiss(resultStr: String) {
+        self.inputText.text = resultStr
+    }
+}
+
+extension ViewController:UITextFieldDelegate{
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        guard textField != self.inputText else {
+            self.alert!.showInput(_withTitle: "", _andMessage: "", _withContentString: textField.text!, completion: {
+                (finished) in
+                
+            })
+            return false
+        }
+        
+        return true
+        
+    }
 }

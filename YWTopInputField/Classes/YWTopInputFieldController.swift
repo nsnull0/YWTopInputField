@@ -14,7 +14,7 @@ public class YWTopInputFieldController: UIViewController {
     @IBOutlet weak var messageLabelYW: UILabel!
     @IBOutlet weak var titleLabelYW: UILabel!
     
-    @IBOutlet weak var inputTextContainerYW: UITextField!
+    @IBOutlet weak var inputTextContainerYW: UITextView!
 
     @IBOutlet weak var containerBlur: UIVisualEffectView!
     
@@ -23,8 +23,6 @@ public class YWTopInputFieldController: UIViewController {
     weak var delegate :YWInputProtocol?
     
     private weak var root:UIViewController?
-    weak var inputTextField:UITextField?
-    weak var inputTextView:UITextView?
     
     
     override public func viewDidLoad() {
@@ -38,7 +36,6 @@ public class YWTopInputFieldController: UIViewController {
         super.viewWillAppear(animated)
         self.topContainerBlurConstraint.constant = -self.getContainerHeight()
         self.view.layoutIfNeeded()
-        self.inputTextContainerYW.delegate = self
     }
 
     override public func didReceiveMemoryWarning() {
@@ -50,14 +47,11 @@ public class YWTopInputFieldController: UIViewController {
         super.init(coder: aDecoder)
     }
 
-    required public init(_contentController parent:UIViewController,_withInput inputField:UITextField, _andDelegate delegation:YWInputProtocol) {
+    required public init(_contentController parent:UIViewController, _andDelegate delegation:YWInputProtocol) {
         let bundle = Bundle(for: YWTopInputFieldController.self)
         super.init(nibName: "YWMainView", bundle: bundle)
         
         self.root = parent
-        self.inputTextField = inputField
-        self.inputTextField!.delegate = self
-        
         
         self.delegate = delegation
         
@@ -65,13 +59,36 @@ public class YWTopInputFieldController: UIViewController {
     
     
     //MARK: Animation and Interface
+    
+    
+    
     public func showInput(_withTitle titleStr:String,_andMessage messageStr:String, completion:@escaping (_ finished:Bool) -> Void){
         self.showInput(completion: completion)
         self.titleLabelYW.text = YWTopInputFieldLogic.checkValidate(_onContent: titleStr, _defaultContent: YWTopInputFieldUtility.titleDefault)
         self.messageLabelYW.text = YWTopInputFieldLogic.checkValidate(_onContent: messageStr, _defaultContent: YWTopInputFieldUtility.messageDefault)
+        self.delegate?.didShowYWInputField()
     }
     
-    public func showInput(completion:@escaping (_ finished:Bool) -> Void){
+    public func showInput(_withTitle titleStr:String,_andMessage messageStr:String,_withContentString content:String  , completion:@escaping (_ finished:Bool) -> Void){
+        self.showInput(completion: completion)
+        self.titleLabelYW.text = YWTopInputFieldLogic.checkValidate(_onContent: titleStr, _defaultContent: YWTopInputFieldUtility.titleDefault)
+        self.messageLabelYW.text = YWTopInputFieldLogic.checkValidate(_onContent: messageStr, _defaultContent: YWTopInputFieldUtility.messageDefault)
+        self.inputTextContainerYW.text = content
+        self.delegate?.didShowYWInputField()
+    }
+    
+    
+    
+    public func showInput(_withTitle titleStr:String,_andMessage messageStr:String,_withContentAttributedString content:NSAttributedString, completion:@escaping (_ finished:Bool) -> Void){
+        self.showInput(completion: completion)
+        self.titleLabelYW.text = YWTopInputFieldLogic.checkValidate(_onContent: titleStr, _defaultContent: YWTopInputFieldUtility.titleDefault)
+        self.messageLabelYW.text = YWTopInputFieldLogic.checkValidate(_onContent: messageStr, _defaultContent: YWTopInputFieldUtility.messageDefault)
+        self.inputTextContainerYW.attributedText = content
+        self.delegate?.didShowYWInputField()
+    }
+    
+    
+    func showInput(completion:@escaping (_ finished:Bool) -> Void){
         guard self.root != nil else {
             completion(false)
             return
@@ -90,15 +107,18 @@ public class YWTopInputFieldController: UIViewController {
         }
     }
     
-    public func hideInput (){
+    func hideInput (completion:@escaping (AnyObject, _ finished:Bool) -> Void){
+        
         UIView.animate(withDuration: 0.3, animations: {
             self.topContainerBlurConstraint.constant = -self.getContainerHeight()
             self.view.layoutIfNeeded()
         }) {
            (finished) in
-            
+            self.inputTextContainerYW.resignFirstResponder()
             self.view.removeFromSuperview()
             self.removeFromParentViewController()
+            completion(self.inputTextContainerYW.text as AnyObject, true)
+            
         }
         
     }
@@ -114,22 +134,25 @@ public class YWTopInputFieldController: UIViewController {
                 make.bottom.equalTo(0)
         }
         
-        
-        
-        
-        
-        
     }
     
     //MARK: Action Handler
     @IBAction func tapDismiss(_ sender: UITapGestureRecognizer) {
         
-        self.hideInput()
+        self.hideInput { (text:AnyObject, completion) in
+            let toText = text as! String
+            self.delegate?.didDismiss(resultStr: toText)
+        }
+        
         
     }
     
     @IBAction func doneAction(_ sender: UIButton) {
         
+        self.hideInput { (text:AnyObject, completion) in
+            let toText = text as! String
+            self.delegate?.didDismiss(resultStr: toText)
+        }
         
     }
     
@@ -147,20 +170,6 @@ public class YWTopInputFieldController: UIViewController {
 }
 
 
-extension YWTopInputFieldController:UITextFieldDelegate{
-    
-    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        
-        
-        guard textField != self.inputTextField else {
-            self.inputTextField?.resignFirstResponder()
-            self.delegate?.didShowYWInputField()
-            return false
-        }
-        
-        
-        return true
-    }
-    
-}
+
+
 
