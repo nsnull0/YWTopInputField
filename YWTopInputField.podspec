@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
     s.name         = "YWTopInputField"
-    s.version      = "0.0.6"
-    s.summary      = "First use using UITextField only"
-    s.description  = "This library could be used on version up to 0.1.0, currently still in progress build"
+    s.version      = "0.0.7"
+    s.summary      = "YWTopInputField Generic First Usage Version"
+    s.description  = "Start from 0.0.7 can be used to Generic input Type, Use it wisely"
     s.requires_arc = true
     s.homepage     = "https://github.com/nsnull0/YWTopInputField"
-    s.license      = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
+    s.license      = { :type => "MIT", :file => "LICENSE" }
     s.author             = { "yoseph_wijaya" => "info@yoseph.ws" }
     s.platform     = :ios
     s.ios.deployment_target = "9.0"
