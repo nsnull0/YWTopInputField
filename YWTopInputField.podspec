@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name         = "YWTopInputField"
-    s.version      = "0.0.5"
-    s.summary      = "Add Public Functionality + Protocol"
+    s.version      = "0.0.6"
+    s.summary      = "First use using UITextField only"
     s.description  = "This library could be used on version up to 0.1.0, currently still in progress build"
     s.requires_arc = true
     s.homepage     = "https://github.com/nsnull0/YWTopInputField"
