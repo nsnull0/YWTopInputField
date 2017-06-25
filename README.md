@@ -98,8 +98,8 @@ extension ViewController:UITextFieldDelegate{
 - leave comment or message me if you guys have wonderful ideas about this library.
 
 ## Credits
-- Yoseph Wijaya Savianto ([@yosephwijaya](http://yoseph.ws))
-- SnapKit Team ([@SnapKit](http://snapkit.io))
+- Creator Yoseph Wijaya Savianto ([@yosephwijaya](http://yoseph.ws))
+- External Library from SnapKit Team ([@SnapKit](http://snapkit.io))
 
 ## License
 - nsnull0/YWTopInputField is licensed under MIT LICENSE
