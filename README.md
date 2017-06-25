@@ -65,4 +65,4 @@ extension ViewController:UITextFieldDelegate{
 - Yoseph Wijaya Savianto ([@yosephwijaya](http://yoseph.ws))
 
 ## License
-- nsnull0/YWTopInputField is licensed under the Apache License 2.0
+- nsnull0/YWTopInputField is licensed under MIT LICENSE
