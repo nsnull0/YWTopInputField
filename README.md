@@ -26,6 +26,10 @@ class ViewController: UIViewController, YWInputProtocol {
             super.viewDidLoad()
             self.alert = YWTopInputFieldController(_contentController: self, _andDelegate: self)
 
+
+            //Optional, it will setup to Default setting
+            alert!.setupInputField(_chooseAutoCorrectionType: .no, _chooseSpellCheckingType: .no, _chooseKeyboardType: .default, _chooseKeyboardAppearance: .alert)
+
             inputText.delegate = self
         }
 
