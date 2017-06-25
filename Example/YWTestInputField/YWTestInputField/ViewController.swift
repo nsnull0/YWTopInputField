@@ -14,6 +14,7 @@ class ViewController: UIViewController, YWInputProtocol {
     
     var alert:YWTopInputFieldController?
     
+    @IBOutlet weak var inputText2: UITextField!
     @IBOutlet weak var inputText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,12 @@ class ViewController: UIViewController, YWInputProtocol {
         
         alert = YWTopInputFieldController(_contentController: self, _andDelegate: self)
         
+        //Optional, it will setup to Default setting
+        alert!.setupInputField(_chooseAutoCorrectionType: .no, _chooseSpellCheckingType: .no, _chooseKeyboardType: .default, _chooseKeyboardAppearance: .alert)
+        
         inputText.delegate = self
+        
+        
         
     }
     

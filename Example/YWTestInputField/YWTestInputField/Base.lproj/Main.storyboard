@@ -37,19 +37,32 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Qh-wp-f0T">
+                                <rect key="frame" x="16" y="569" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="y4Z-lF-90p"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.53697660219999999" green="0.76866416969999996" blue="0.77452807739999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Q2x-UB-hC1" secondAttribute="trailing" constant="20" id="2yM-L9-tbd"/>
+                            <constraint firstItem="7Qh-wp-f0T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="3sf-dn-jr8"/>
                             <constraint firstItem="LLQ-TK-zyf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="P49-Gb-WHz"/>
                             <constraint firstItem="Q2x-UB-hC1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="UrN-fn-due"/>
+                            <constraint firstAttribute="trailing" secondItem="7Qh-wp-f0T" secondAttribute="trailing" constant="16" id="c74-Ts-3di"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LLQ-TK-zyf" secondAttribute="bottom" constant="30" id="cxg-Fo-TQ4"/>
+                            <constraint firstItem="LLQ-TK-zyf" firstAttribute="top" secondItem="7Qh-wp-f0T" secondAttribute="bottom" constant="8" id="n0m-iK-6u1"/>
                             <constraint firstItem="Q2x-UB-hC1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="pJV-Ad-ZiN"/>
                             <constraint firstItem="LLQ-TK-zyf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ph5-D7-109"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="inputText" destination="LLQ-TK-zyf" id="ZrY-bJ-bJg"/>
+                        <outlet property="inputText2" destination="7Qh-wp-f0T" id="UDd-mV-rYL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

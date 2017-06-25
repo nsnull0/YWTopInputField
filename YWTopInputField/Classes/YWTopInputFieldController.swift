@@ -24,6 +24,10 @@ public class YWTopInputFieldController: UIViewController {
     
     private weak var root:UIViewController?
     
+    private var correctionType:UITextAutocorrectionType = .no
+    private var spellCheckType:UITextSpellCheckingType = .no
+    private var keyboardType:UIKeyboardType = .default
+    private var keyboardAppearance:UIKeyboardAppearance = .default
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -55,13 +59,20 @@ public class YWTopInputFieldController: UIViewController {
         
         self.delegate = delegation
         
+        self.didMove(toParentViewController: self.root!)
+        
     }
     
     
+    //MARK: Setup Default Property
+    public func setupInputField(_chooseAutoCorrectionType correctionType:UITextAutocorrectionType, _chooseSpellCheckingType spellType:UITextSpellCheckingType, _chooseKeyboardType keyboardType:UIKeyboardType, _chooseKeyboardAppearance keyboardAppearance:UIKeyboardAppearance){
+        self.correctionType = correctionType
+        self.spellCheckType = spellType
+        self.keyboardType = keyboardType
+        self.keyboardAppearance = keyboardAppearance
+    }
+    
     //MARK: Animation and Interface
-    
-    
-    
     public func showInput(_withTitle titleStr:String,_andMessage messageStr:String, completion:@escaping (_ finished:Bool) -> Void){
         self.showInput(completion: completion)
         self.titleLabelYW.text = YWTopInputFieldLogic.checkValidate(_onContent: titleStr, _defaultContent: YWTopInputFieldUtility.titleDefault)
@@ -124,7 +135,7 @@ public class YWTopInputFieldController: UIViewController {
     }
     
     func createObject() {
-        self.didMove(toParentViewController: self.root!)
+        
         self.root!.view.addSubview(self.view)
         self.view.snp.makeConstraints {
                 (make) -> Void in
@@ -133,6 +144,11 @@ public class YWTopInputFieldController: UIViewController {
                 make.top.equalTo(0)
                 make.bottom.equalTo(0)
         }
+        
+        self.inputTextContainerYW.autocorrectionType = self.correctionType
+        self.inputTextContainerYW.keyboardAppearance = self.keyboardAppearance
+        self.inputTextContainerYW.spellCheckingType = self.spellCheckType
+        self.inputTextContainerYW.keyboardType = self.keyboardType
         
     }
     
