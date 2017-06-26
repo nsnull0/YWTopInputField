@@ -12,7 +12,7 @@ Will be more generic day by day
 #### ⚠️ **This Library only Available to Swift > 3.0** ⚠️
 
 ## DEMO V0.1.0
-![Demo](https://s17.postimg.org/ez03lhm8f/YWTop_Input_Field.gif)
+![Demo](https://s7.postimg.org/fhodjzcsr/YWTop_Input_Field_1.gif)
 
 ## Installation
 
