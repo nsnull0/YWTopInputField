@@ -20,14 +20,27 @@ public class YWTopInputFieldController: UIViewController {
     
     @IBOutlet weak var topContainerBlurConstraint: NSLayoutConstraint!
     
+    
+    
+    
     weak var delegate :YWInputProtocol?
     
     private weak var root:UIViewController?
+    
     
     private var correctionType:UITextAutocorrectionType = .no
     private var spellCheckType:UITextSpellCheckingType = .no
     private var keyboardType:UIKeyboardType = .default
     private var keyboardAppearance:UIKeyboardAppearance = .default
+    
+    
+    private var containerEffectType:UIBlurEffectStyle = .dark
+    private var titleColorText:UIColor = .white
+    private var messageColorText:UIColor = .white
+    private var titleFontText:UIFont = .boldSystemFont(ofSize: 15.0)
+    private var messageFontText:UIFont = .systemFont(ofSize: 12.0)
+    
+    private var addressTag:Int = 0
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -72,33 +85,43 @@ public class YWTopInputFieldController: UIViewController {
         self.keyboardAppearance = keyboardAppearance
     }
     
+    public func setupContainer(_chooseBlurStyleEffectContainer type:UIBlurEffectStyle, _chooseTitleColor colorTitle:UIColor, _chooseMessageColor colorMessage:UIColor, _chooseFontTitle fontTitle:UIFont, _chooseFontMessage fontMessage:UIFont){
+        self.containerEffectType = type
+        self.titleColorText = colorTitle
+        self.messageColorText = colorMessage
+        self.titleFontText = fontTitle
+        self.messageFontText = fontMessage
+    }
+    
     //MARK: Animation and Interface
-    public func showInput(_withTitle titleStr:String,_andMessage messageStr:String, completion:@escaping (_ finished:Bool) -> Void){
+    public func showInput(_withTitle titleStr:String,_andMessage messageStr:String, _withTag tag:Int, completion:@escaping (_ finished:Bool) -> Void){
         self.showInput(completion: completion)
         self.titleLabelYW.text = YWTopInputFieldLogic.checkValidate(_onContent: titleStr, _defaultContent: YWTopInputFieldUtility.titleDefault)
         self.messageLabelYW.text = YWTopInputFieldLogic.checkValidate(_onContent: messageStr, _defaultContent: YWTopInputFieldUtility.messageDefault)
+        self.addressTag = tag
         self.delegate?.didShowYWInputField()
     }
     
-    public func showInput(_withTitle titleStr:String,_andMessage messageStr:String,_withContentString content:String  , completion:@escaping (_ finished:Bool) -> Void){
+    public func showInput(_withTitle titleStr:String,_andMessage messageStr:String,_withContentString content:String, _withTag tag:Int  , completion:@escaping (_ finished:Bool) -> Void){
         self.showInput(completion: completion)
         self.titleLabelYW.text = YWTopInputFieldLogic.checkValidate(_onContent: titleStr, _defaultContent: YWTopInputFieldUtility.titleDefault)
         self.messageLabelYW.text = YWTopInputFieldLogic.checkValidate(_onContent: messageStr, _defaultContent: YWTopInputFieldUtility.messageDefault)
         self.inputTextContainerYW.text = content
+        self.addressTag = tag
         self.delegate?.didShowYWInputField()
     }
     
     
-    
-    public func showInput(_withTitle titleStr:String,_andMessage messageStr:String,_withContentAttributedString content:NSAttributedString, completion:@escaping (_ finished:Bool) -> Void){
+    public func showInput(_withTitle titleStr:String,_andMessage messageStr:String,_withContentAttributedString content:NSAttributedString, _withTag tag:Int, completion:@escaping (_ finished:Bool) -> Void){
         self.showInput(completion: completion)
         self.titleLabelYW.text = YWTopInputFieldLogic.checkValidate(_onContent: titleStr, _defaultContent: YWTopInputFieldUtility.titleDefault)
         self.messageLabelYW.text = YWTopInputFieldLogic.checkValidate(_onContent: messageStr, _defaultContent: YWTopInputFieldUtility.messageDefault)
         self.inputTextContainerYW.attributedText = content
+        self.addressTag = tag
         self.delegate?.didShowYWInputField()
     }
     
-    
+    //MARK: Private Animation and Interface implementation
     func showInput(completion:@escaping (_ finished:Bool) -> Void){
         guard self.root != nil else {
             completion(false)
@@ -150,16 +173,24 @@ public class YWTopInputFieldController: UIViewController {
         self.inputTextContainerYW.spellCheckingType = self.spellCheckType
         self.inputTextContainerYW.keyboardType = self.keyboardType
         
+        let visEffect:UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: self.containerEffectType))
+        self.containerBlur.effect = visEffect.effect!
+        self.titleLabelYW.textColor = self.titleColorText
+        self.messageLabelYW.textColor = self.messageColorText
+        self.titleLabelYW.font = self.titleFontText
+        self.messageLabelYW.font = self.messageFontText
     }
     
     //MARK: Action Handler
     @IBAction func tapDismiss(_ sender: UITapGestureRecognizer) {
+    
         
-        self.hideInput { (text:AnyObject, completion) in
-            let toText = text as! String
-            self.delegate?.didDismiss(resultStr: toText)
-        }
+        self.hideInput(completion: {
+            (text:AnyObject, completion) in
+            self.delegate?.didCancel()
+        })
         
+       self.delegate?.didCancel()
         
     }
     
@@ -167,13 +198,17 @@ public class YWTopInputFieldController: UIViewController {
         
         self.hideInput { (text:AnyObject, completion) in
             let toText = text as! String
-            self.delegate?.didDismiss(resultStr: toText)
+            self.delegate?.doneAction(resultStr: toText, _withTag: self.addressTag)
         }
         
     }
     
     @IBAction func cancelAction(_ sender: UIButton) {
         
+        self.hideInput(completion: {
+            (text:AnyObject, completion) in
+            self.delegate?.didCancel()
+        })
         
     }
     

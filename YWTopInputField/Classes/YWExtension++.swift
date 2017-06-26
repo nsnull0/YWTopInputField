@@ -21,3 +21,28 @@ extension UIViewController{
     
 }
 
+extension UIButton{
+    
+    var borderColoring:UIColor {
+        set{
+            self.layer.borderColor = newValue.cgColor
+            self.layer.borderWidth = 1
+        }
+        
+        get{
+            return UIColor(cgColor: self.layer.borderColor!)
+        }
+    }
+    
+    var cornerRadiuser:CGFloat {
+        set {
+            self.layer.cornerRadius = newValue
+            self.layer.masksToBounds = true
+        }
+        get {
+            return self.layer.cornerRadius
+        }
+    }
+    
+}
+

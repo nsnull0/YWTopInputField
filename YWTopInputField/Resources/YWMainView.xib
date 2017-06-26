@@ -47,28 +47,44 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dja-ae-Mvm">
-                                <rect key="frame" x="8" y="154" width="304" height="30"/>
+                                <rect key="frame" x="0.0" y="154" width="320" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84w-x0-nf8">
-                                        <rect key="frame" x="156" y="0.0" width="140" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84w-x0-nf8">
+                                        <rect key="frame" x="164" y="0.0" width="148" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="dTh-7F-u6h"/>
                                         </constraints>
                                         <state key="normal" title="Done">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColoring">
+                                                <color key="value" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuser">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="doneAction:" destination="-1" eventType="touchUpInside" id="MDt-oP-skB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQg-yw-QPS">
-                                        <rect key="frame" x="8" y="0.0" width="140" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQg-yw-QPS">
+                                        <rect key="frame" x="8" y="0.0" width="148" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="OvF-R8-ON2"/>
                                         </constraints>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColoring">
+                                                <color key="value" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiuser">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="Vby-rQ-ep7"/>
                                         </connections>
@@ -118,10 +134,10 @@
                             <constraint firstAttribute="trailing" secondItem="zAV-nJ-kZV" secondAttribute="trailing" constant="8" id="Jvz-mZ-HDa"/>
                             <constraint firstItem="mED-c4-V9I" firstAttribute="leading" secondItem="CcS-fA-TVl" secondAttribute="leading" constant="8" id="OcP-jT-nAK"/>
                             <constraint firstItem="mED-c4-V9I" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zAV-nJ-kZV" secondAttribute="bottom" constant="8" id="OnE-bb-grF"/>
-                            <constraint firstAttribute="trailing" secondItem="dja-ae-Mvm" secondAttribute="trailing" constant="8" id="RZV-mj-mKY"/>
+                            <constraint firstAttribute="trailing" secondItem="dja-ae-Mvm" secondAttribute="trailing" id="RZV-mj-mKY"/>
                             <constraint firstItem="FJB-lp-TBK" firstAttribute="top" secondItem="CcS-fA-TVl" secondAttribute="top" constant="25" id="ixt-fb-IiJ"/>
                             <constraint firstItem="FJB-lp-TBK" firstAttribute="leading" secondItem="CcS-fA-TVl" secondAttribute="leading" constant="8" id="lKU-CD-3qc"/>
-                            <constraint firstItem="dja-ae-Mvm" firstAttribute="leading" secondItem="CcS-fA-TVl" secondAttribute="leading" constant="8" id="sdO-n9-eX2"/>
+                            <constraint firstItem="dja-ae-Mvm" firstAttribute="leading" secondItem="CcS-fA-TVl" secondAttribute="leading" id="sdO-n9-eX2"/>
                             <constraint firstAttribute="trailing" secondItem="FJB-lp-TBK" secondAttribute="trailing" constant="8" id="x5t-3t-Frz"/>
                         </constraints>
                     </view>

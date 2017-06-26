@@ -10,9 +10,9 @@ import UIKit
 
 public protocol YWInputProtocol: class {
     
-    func doneAction(resultStr: String)
-    
     func didShowYWInputField()
     
-    func didDismiss(resultStr: String)
+    func doneAction(resultStr: String,_withTag tag:Int)
+    
+    func didCancel()
 }

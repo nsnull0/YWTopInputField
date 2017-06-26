@@ -17,6 +17,6 @@ target 'YWTestInputField' do
     # Pods for testing
   end
 
-#pod 'YWTopInputField', :path => '~/Documents/Github/YWTopInputField'
-pod 'YWTopInputField'
+pod 'YWTopInputField', :path => '~/Documents/Github/YWTopInputField'
+#pod 'YWTopInputField'
 end
