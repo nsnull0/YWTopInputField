@@ -11,6 +11,8 @@ Will be more generic day by day
 ## Availability
 #### ⚠️ **This Library only Available to Swift > 3.0** ⚠️
 
+## DEMO V0.1.0
+![Demo](https://s17.postimg.org/ez03lhm8f/YWTop_Input_Field.gif)
 
 ## Installation
 
