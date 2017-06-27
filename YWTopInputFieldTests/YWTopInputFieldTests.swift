@@ -40,4 +40,32 @@ class YWTopInputFieldTests: XCTestCase {
         
     }
     
+    func testSetupUIViewConstraints()  {
+        let parentView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        let childView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+        
+        parentView.addSubview(childView)
+        
+        XCTAssertEqual(parentView.constraints.count, 0)
+        
+        childView.setupLayoutConstraint_0_0_0_0_toParent()
+        
+        XCTAssertEqual(parentView.constraints.count, 4)
+        
+        childView.removeFromSuperview()
+        parentView.addSubview(childView)
+        
+        childView.setupLayoutConstraint_0_0_0_0_toParent()
+        
+        XCTAssertEqual(parentView.constraints.count, 4)
+        
+        childView.removeFromSuperview()
+        parentView.addSubview(childView)
+        
+        childView.setupLayoutConstraint_0_0_0_0_toParent()
+        
+        XCTAssertEqual(parentView.constraints.count, 4)
+        
+    }
+    
 }

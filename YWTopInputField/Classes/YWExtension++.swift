@@ -39,10 +39,11 @@ extension UIView{
         let bottomConstraint:NSLayoutConstraint = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: self.superview!, attribute: .bottomMargin, multiplier: 1.0, constant: 0.0)
         bottomConstraint.isActive = true
         
-        self.superview!.removeConstraint(topConstraint)
-        self.superview!.removeConstraint(leftConstraint)
-        self.superview!.removeConstraint(rightConstraint)
-        self.superview!.removeConstraint(bottomConstraint)
+        
+        let arraySuperViewConstraints:[NSLayoutConstraint] = [topConstraint, leftConstraint, rightConstraint, bottomConstraint]
+        
+        self.superview!.removeConstraints(arraySuperViewConstraints)
+        
         
         self.superview!.addConstraint(topConstraint)
         self.superview!.addConstraint(leftConstraint)

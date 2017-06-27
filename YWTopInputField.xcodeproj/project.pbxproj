@@ -123,7 +123,6 @@
 		C116AE761EFB896D00B3B36F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C13D42281EFECCCA0074A7A7 /* New Group */,
 				C13D42251EFE91BD0074A7A7 /* Extension */,
 				C13D421C1EFE57360074A7A7 /* Protocol */,
 				C116AF371EFD9CEA00B3B36F /* Controller */,
@@ -163,13 +162,6 @@
 				C13D42261EFE91EC0074A7A7 /* YWExtension++.swift */,
 			);
 			name = Extension;
-			sourceTree = "<group>";
-		};
-		C13D42281EFECCCA0074A7A7 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
 			sourceTree = "<group>";
 		};
 		F296492F307FCFAA1E8AE503 /* Frameworks */ = {
