@@ -39,10 +39,6 @@ Then, run the following command:
 $ pod install
 ```
 
-
-## Dependency
-- This library use SnapKit V3.2.0 resources from http://snapkit.io (Thanks to them, I can make the interface easier)
-
 ## Initialization
 ```swift
 
@@ -180,7 +176,6 @@ extension ViewController:UITextViewDelegate{
 
 ## Credits
 - Creator Yoseph Wijaya Savianto ([@yosephwijaya](http://yoseph.ws))
-- External Library from SnapKit Team ([@SnapKit](http://snapkit.io))
 
 ## License
 - nsnull0/YWTopInputField is licensed under MIT LICENSE
