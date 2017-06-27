@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "033AF1485C616BE38F1904EAE545DDEB"
+               BlueprintIdentifier = "E1A24224DFB30756EC33B23DCBA6B38D"
                BuildableName = "Pods_YWTopInputFieldTests.framework"
                BlueprintName = "Pods-YWTopInputFieldTests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "033AF1485C616BE38F1904EAE545DDEB"
+            BlueprintIdentifier = "E1A24224DFB30756EC33B23DCBA6B38D"
             BuildableName = "Pods_YWTopInputFieldTests.framework"
             BlueprintName = "Pods-YWTopInputFieldTests"
             ReferencedContainer = "container:Pods.xcodeproj">

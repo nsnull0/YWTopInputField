@@ -14,6 +14,6 @@ target 'YWTopInputField' do
   end
 
 
-pod 'SnapKit'
+
 
 end

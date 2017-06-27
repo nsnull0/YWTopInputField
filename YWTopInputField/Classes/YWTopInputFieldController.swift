@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 
 public class YWTopInputFieldController: UIViewController {
     
@@ -160,13 +159,7 @@ public class YWTopInputFieldController: UIViewController {
     func createObject() {
         
         self.root!.view.addSubview(self.view)
-        self.view.snp.makeConstraints {
-                (make) -> Void in
-                make.leading.equalTo(0)
-                make.trailing.equalTo(0)
-                make.top.equalTo(0)
-                make.bottom.equalTo(0)
-        }
+        self.view.setupLayoutConstraint_0_0_0_0_toParent()
         
         self.inputTextContainerYW.autocorrectionType = self.correctionType
         self.inputTextContainerYW.keyboardAppearance = self.keyboardAppearance
