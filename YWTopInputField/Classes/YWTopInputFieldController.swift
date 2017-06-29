@@ -19,8 +19,13 @@ public class YWTopInputFieldController: UIViewController {
     
     @IBOutlet weak var topContainerBlurConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var accessoryOfYWInputField: UIView!
     
+    @IBOutlet weak var inputAcessoryYWInputField: UIVisualEffectView!
     
+    @IBOutlet weak var inputAccessoryYWInputFieldPart: UIVisualEffectView!
+    
+    @IBOutlet weak var bottomConstraintInputYWField: NSLayoutConstraint!
     
     weak var delegate :YWInputProtocol?
     
@@ -43,9 +48,8 @@ public class YWTopInputFieldController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        
+        self.inputTextContainerYW.inputAccessoryView = accessoryOfYWInputField
+        self.inputAccessoryYWInputFieldPart.layer.opacity = 0
     }
     
     public override func viewWillAppear(_ animated: Bool) {
@@ -168,6 +172,8 @@ public class YWTopInputFieldController: UIViewController {
         
         let visEffect:UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: self.containerEffectType))
         self.containerBlur.effect = visEffect.effect!
+        self.inputAcessoryYWInputField.effect = visEffect.effect!
+        self.inputAccessoryYWInputFieldPart.effect = visEffect.effect!
         self.titleLabelYW.textColor = self.titleColorText
         self.messageLabelYW.textColor = self.messageColorText
         self.titleLabelYW.font = self.titleFontText
@@ -201,6 +207,26 @@ public class YWTopInputFieldController: UIViewController {
         self.hideInput(completion: {
             (text:AnyObject, completion) in
             self.delegate?.didCancel()
+        })
+        
+    }
+    @IBAction func editAttributes(_ sender: UIButton) {
+        
+        guard self.bottomConstraintInputYWField.constant == -40 else {
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.bottomConstraintInputYWField.constant = -40
+                self.inputAccessoryYWInputFieldPart.layer.opacity = 0
+                self.accessoryOfYWInputField.layoutIfNeeded()
+            })
+            
+            return
+        }
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.bottomConstraintInputYWField.constant = 0
+            self.inputAccessoryYWInputFieldPart.layer.opacity = 1
+            self.accessoryOfYWInputField.layoutIfNeeded()
         })
         
     }

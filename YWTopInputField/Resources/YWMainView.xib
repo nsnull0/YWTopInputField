@@ -11,7 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YWTopInputFieldController" customModule="YWTopInputField" customModuleProvider="target">
             <connections>
+                <outlet property="accessoryOfYWInputField" destination="OsJ-Oc-paw" id="Bxf-oV-j4I"/>
+                <outlet property="bottomConstraintInputYWField" destination="x32-5G-B7J" id="G2k-sx-2ps"/>
                 <outlet property="containerBlur" destination="29C-b5-vWU" id="WY3-Mg-KMI"/>
+                <outlet property="inputAccessoryYWInputFieldPart" destination="xux-rs-5XW" id="wsp-Gx-Zei"/>
+                <outlet property="inputAcessoryYWInputField" destination="gE0-OH-pPB" id="gc0-HM-kkq"/>
                 <outlet property="inputTextContainerYW" destination="mED-c4-V9I" id="fbd-Fi-e1n"/>
                 <outlet property="messageLabelYW" destination="zAV-nJ-kZV" id="MpK-Q2-g65"/>
                 <outlet property="titleLabelYW" destination="FJB-lp-TBK" id="ohR-J4-b09"/>
@@ -20,6 +24,63 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="OsJ-Oc-paw">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xux-rs-5XW">
+                    <rect key="frame" x="0.0" y="40" width="320" height="40"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0Kw-Im-gFh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="3wU-yI-fUo"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gE0-OH-pPB">
+                    <rect key="frame" x="0.0" y="40" width="320" height="40"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zEa-4l-fxl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEW-gA-rQw">
+                                <rect key="frame" x="212" y="5" width="98" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nhK-hR-o01"/>
+                                </constraints>
+                                <state key="normal" title="Edit Attributes">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="editAttributes:" destination="-1" eventType="touchUpInside" id="UIm-0r-amR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="zEW-gA-rQw" firstAttribute="centerY" secondItem="zEa-4l-fxl" secondAttribute="centerY" id="eW0-7m-xMA"/>
+                            <constraint firstAttribute="trailing" secondItem="zEW-gA-rQw" secondAttribute="trailing" constant="10" id="qON-MH-PON"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Hv2-pP-v1Y"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="gE0-OH-pPB" firstAttribute="leading" secondItem="OsJ-Oc-paw" secondAttribute="leading" id="CPd-c0-YM9"/>
+                <constraint firstAttribute="trailing" secondItem="xux-rs-5XW" secondAttribute="trailing" id="EBa-5z-l2a"/>
+                <constraint firstAttribute="trailing" secondItem="gE0-OH-pPB" secondAttribute="trailing" id="NWy-dN-elw"/>
+                <constraint firstItem="xux-rs-5XW" firstAttribute="leading" secondItem="OsJ-Oc-paw" secondAttribute="leading" id="Qyc-Qz-i6r"/>
+                <constraint firstAttribute="bottom" secondItem="gE0-OH-pPB" secondAttribute="bottom" id="wqc-63-GG8"/>
+                <constraint firstItem="gE0-OH-pPB" firstAttribute="top" secondItem="xux-rs-5XW" secondAttribute="bottom" constant="-40" id="x32-5G-B7J"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34" y="605"/>
+        </view>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

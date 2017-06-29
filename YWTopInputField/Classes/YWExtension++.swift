@@ -55,6 +55,13 @@ extension UIView{
     
 }
 
+extension UIVisualEffectView{
+    
+    
+    
+}
+
+
 extension UIButton{
     
     var borderColoring:UIColor {
