@@ -248,7 +248,6 @@
 				TargetAttributes = {
 					C116AF011EFD8F4200B3B36F = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 6PD7BDJUDR;
 						ProvisioningStyle = Automatic;
 					};
 					C116AF151EFD8F4200B3B36F = {
@@ -612,8 +611,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6PD7BDJUDR;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = YWTestInputField/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Me.Self.YWTestInputField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -627,8 +627,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6PD7BDJUDR;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = YWTestInputField/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Me.Self.YWTestInputField;
 				PRODUCT_NAME = "$(TARGET_NAME)";

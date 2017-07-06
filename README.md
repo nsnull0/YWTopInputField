@@ -171,7 +171,7 @@ extension ViewController:UITextViewDelegate{
 
 ```
 ## Support
-- Updated Everyday for more Generic and developer-friendly
+- Updated occasionally for more Generic and developer-friendly
 - leave comment or message me if you guys have wonderful ideas about this library.
 
 ## Credits
