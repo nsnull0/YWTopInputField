@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,6 +13,7 @@
                 <outlet property="accessoryOfYWInputField" destination="OsJ-Oc-paw" id="Bxf-oV-j4I"/>
                 <outlet property="bottomConstraintInputYWField" destination="x32-5G-B7J" id="G2k-sx-2ps"/>
                 <outlet property="containerBlur" destination="29C-b5-vWU" id="WY3-Mg-KMI"/>
+                <outlet property="heightConstraintContainerInputYWField" destination="xmU-Ig-SW5" id="3w8-WJ-AKl"/>
                 <outlet property="inputAccessoryYWInputFieldPart" destination="xux-rs-5XW" id="wsp-Gx-Zei"/>
                 <outlet property="inputAcessoryYWInputField" destination="gE0-OH-pPB" id="gc0-HM-kkq"/>
                 <outlet property="inputTextContainerYW" destination="mED-c4-V9I" id="fbd-Fi-e1n"/>
@@ -93,9 +93,9 @@
                     </connections>
                 </view>
                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29C-b5-vWU">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="192"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CcS-fA-TVl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="192"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FJB-lp-TBK">
@@ -108,7 +108,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dja-ae-Mvm">
-                                <rect key="frame" x="0.0" y="154" width="320" height="30"/>
+                                <rect key="frame" x="0.0" y="162" width="320" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84w-x0-nf8">
                                         <rect key="frame" x="164" y="0.0" width="148" height="30"/>
@@ -172,7 +172,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mED-c4-V9I">
-                                <rect key="frame" x="8" y="101" width="304" height="45"/>
+                                <rect key="frame" x="8" y="109" width="304" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="EDz-8n-TzR"/>
@@ -202,6 +202,9 @@
                             <constraint firstAttribute="trailing" secondItem="FJB-lp-TBK" secondAttribute="trailing" constant="8" id="x5t-3t-Frz"/>
                         </constraints>
                     </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="xmU-Ig-SW5"/>
+                    </constraints>
                     <blurEffect style="dark"/>
                 </visualEffectView>
             </subviews>
@@ -212,7 +215,6 @@
                 <constraint firstAttribute="bottom" secondItem="HKW-pO-aZg" secondAttribute="bottom" id="GQZ-d9-q0g"/>
                 <constraint firstItem="29C-b5-vWU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VBz-69-0n1"/>
                 <constraint firstItem="HKW-pO-aZg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VLM-N9-jK1"/>
-                <constraint firstItem="29C-b5-vWU" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="2:5" id="aVI-9J-DR6"/>
                 <constraint firstAttribute="trailing" secondItem="HKW-pO-aZg" secondAttribute="trailing" id="dEc-wt-3zR"/>
                 <constraint firstItem="HKW-pO-aZg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mBS-mp-Avn"/>
             </constraints>

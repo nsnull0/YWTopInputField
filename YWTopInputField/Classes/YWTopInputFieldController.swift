@@ -27,6 +27,10 @@ public class YWTopInputFieldController: UIViewController {
     
     @IBOutlet weak var bottomConstraintInputYWField: NSLayoutConstraint!
     
+    @IBOutlet weak var heightConstraintContainerInputYWField: NSLayoutConstraint!
+    
+    
+    
     weak var delegate :YWInputProtocol?
     
     private weak var root:UIViewController?
@@ -44,11 +48,18 @@ public class YWTopInputFieldController: UIViewController {
     private var titleFontText:UIFont = .boldSystemFont(ofSize: 15.0)
     private var messageFontText:UIFont = .systemFont(ofSize: 12.0)
     
+    
+    
+    private var heightContainerConstraint:CGFloat = 200
     private var addressTag:Int = 0
+    
+    
+    
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        self.inputTextContainerYW.inputAccessoryView = accessoryOfYWInputField
+        //version 2.0
+//        self.inputTextContainerYW.inputAccessoryView = accessoryOfYWInputField
         self.inputAccessoryYWInputFieldPart.layer.opacity = 0
     }
     
@@ -94,6 +105,11 @@ public class YWTopInputFieldController: UIViewController {
         self.messageColorText = colorMessage
         self.titleFontText = fontTitle
         self.messageFontText = fontMessage
+    }
+    
+    public func setContainer(_height value:CGFloat){
+        heightContainerConstraint = value
+        self.view.layoutIfNeeded()
     }
     
     //MARK: Animation and Interface
@@ -170,14 +186,16 @@ public class YWTopInputFieldController: UIViewController {
         self.inputTextContainerYW.spellCheckingType = self.spellCheckType
         self.inputTextContainerYW.keyboardType = self.keyboardType
         
-        let visEffect:UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: self.containerEffectType))
-        self.containerBlur.effect = visEffect.effect!
-        self.inputAcessoryYWInputField.effect = visEffect.effect!
-        self.inputAccessoryYWInputFieldPart.effect = visEffect.effect!
+//        let visEffect:UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: self.containerEffectType))
+//        self.containerBlur.effect = visEffect.effect!
+//        self.inputAcessoryYWInputField.effect = visEffect.effect!
+//        self.inputAccessoryYWInputFieldPart.effect = visEffect.effect!
         self.titleLabelYW.textColor = self.titleColorText
         self.messageLabelYW.textColor = self.messageColorText
         self.titleLabelYW.font = self.titleFontText
         self.messageLabelYW.font = self.messageFontText
+        
+        self.heightConstraintContainerInputYWField.constant = heightContainerConstraint
     }
     
     //MARK: Action Handler
