@@ -60,11 +60,13 @@ public class YWTopInputFieldController: UIViewController {
         super.viewDidLoad()
         //version 2.0
 //        self.inputTextContainerYW.inputAccessoryView = accessoryOfYWInputField
+        self.view.frame = CGRect(x: 0, y: 0, width: getScreenWidth(), height: getScreenHeight())
         self.inputAccessoryYWInputFieldPart.layer.opacity = 0
     }
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+       
         self.topContainerBlurConstraint.constant = -self.getContainerHeight()
         self.view.layoutIfNeeded()
     }
@@ -148,6 +150,8 @@ public class YWTopInputFieldController: UIViewController {
         }
         
         self.createObject()
+        self.view.layoutIfNeeded()
+        
         UIView.animate(withDuration: 0.3, animations: {
             self.topContainerBlurConstraint.constant = 0
             self.view.layoutIfNeeded()
@@ -179,6 +183,9 @@ public class YWTopInputFieldController: UIViewController {
     func createObject() {
         
         self.root!.view.addSubview(self.view)
+        
+        self.view.frame = CGRect(x: 0, y: 0, width: getScreenWidth(), height: getScreenHeight())
+        
         self.view.setupLayoutConstraint_0_0_0_0_toParent()
         
         self.inputTextContainerYW.autocorrectionType = self.correctionType

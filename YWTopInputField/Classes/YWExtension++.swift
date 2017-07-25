@@ -15,6 +15,10 @@ extension UIViewController{
         return UIScreen.main.bounds.size.width
     }
     
+    func getScreenHeight() -> CGFloat {
+        return UIScreen.main.bounds.size.height
+    }
+    
     func getContainerHeight() -> CGFloat {
         return UIScreen.main.bounds.size.height / 5 * 2
     }

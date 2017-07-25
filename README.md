@@ -65,6 +65,17 @@ alert!.setupContainer(_chooseBlurStyleEffectContainer: .dark, _chooseTitleColor:
     func didCancel()
 ```
 
+## Property Setup
+```swift
+//Optional, it will setup to Default setting
+alert!.setupInputField(_chooseAutoCorrectionType: .no, _chooseSpellCheckingType: .no, _chooseKeyboardType: .default, _chooseKeyboardAppearance: .alert)
+
+//Optional, it will setup to Default setting
+alert!.setupContainer(_chooseBlurStyleEffectContainer: .dark, _chooseTitleColor: .white, _chooseMessageColor: .white, _chooseFontTitle: .boldSystemFont(ofSize: 15.0), _chooseFontMessage: .systemFont(ofSize: 12.0))
+
+//Optional, it will setup to Default setting <200>
+alert!.setContainer(_height: 250)
+```
 
 ## Example
 ```swift
@@ -97,7 +108,8 @@ class ViewController: UIViewController, YWInputProtocol {
             //Optional, it will setup to Default setting
             alert!.setupContainer(_chooseBlurStyleEffectContainer: .dark, _chooseTitleColor: .white, _chooseMessageColor: .white, _chooseFontTitle: .boldSystemFont(ofSize: 15.0), _chooseFontMessage: .systemFont(ofSize: 12.0))
 
-
+            //Optional, it will setup to Default setting <200>
+            alert!.setContainer(_height: 250)
             inputText.delegate = self
             inputTextView.delegate = self
 
