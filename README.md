@@ -78,7 +78,6 @@ alert!.setContainer(_height: 250)
 ```
 
 
-```
 ## Support
 - Updated occasionally for more Generic and developer-friendly
 - Pull me request if you guys want to contribute too.
