@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../YWTopInputField/Classes/YWTopInputFieldController.swift"
-            timestampString = "522670251.047421"
+            timestampString = "523388452.915648"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "YWTopInputFieldController"
             landmarkType = "3">
          </BreakpointContent>

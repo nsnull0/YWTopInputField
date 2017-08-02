@@ -90,6 +90,7 @@ public class YWTopInputFieldController: UIViewController {
         
         self.didMove(toParentViewController: self.root!)
         
+        self.createPrivateObjectWithout()
     }
     
     
@@ -203,6 +204,33 @@ public class YWTopInputFieldController: UIViewController {
         self.messageLabelYW.font = self.messageFontText
         
         self.heightConstraintContainerInputYWField.constant = heightContainerConstraint
+    }
+    
+    func createPrivateObjectWithout(){
+        self.root!.view.addSubview(self.view)
+        
+        self.view.frame = CGRect(x: 0, y: 0, width: getScreenWidth(), height: getScreenHeight())
+        
+        self.view.setupLayoutConstraint_0_0_0_0_toParent()
+        
+        self.inputTextContainerYW.autocorrectionType = self.correctionType
+        self.inputTextContainerYW.keyboardAppearance = self.keyboardAppearance
+        self.inputTextContainerYW.spellCheckingType = self.spellCheckType
+        self.inputTextContainerYW.keyboardType = self.keyboardType
+        
+        //        let visEffect:UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: self.containerEffectType))
+        //        self.containerBlur.effect = visEffect.effect!
+        //        self.inputAcessoryYWInputField.effect = visEffect.effect!
+        //        self.inputAccessoryYWInputFieldPart.effect = visEffect.effect!
+        self.titleLabelYW.textColor = self.titleColorText
+        self.messageLabelYW.textColor = self.messageColorText
+        self.titleLabelYW.font = self.titleFontText
+        self.messageLabelYW.font = self.messageFontText
+        
+        self.heightConstraintContainerInputYWField.constant = heightContainerConstraint
+        
+        self.view.removeFromSuperview()
+        self.removeFromParentViewController()
     }
     
     //MARK: Action Handler
