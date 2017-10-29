@@ -80,7 +80,7 @@ public class YWTopInputFieldController: UIViewController {
         super.init(coder: aDecoder)
     }
 
-    required public init(_contentController parent:UIViewController, _andDelegate delegation:YWInputProtocol) {
+    required public init(_contentController parent:UIViewController, _andDelegate delegation:YWInputProtocol?) {
         let bundle = Bundle(for: YWTopInputFieldController.self)
         super.init(nibName: "YWMainView", bundle: bundle)
         
@@ -110,7 +110,10 @@ public class YWTopInputFieldController: UIViewController {
         self.messageFontText = fontMessage
     }
     
-    public func setContainer(_height value:CGFloat){
+    public func setContainer(height value:CGFloat){
+        guard value >= 200 else {
+            return
+        }
         heightContainerConstraint = value
         self.view.layoutIfNeeded()
     }
@@ -168,7 +171,7 @@ public class YWTopInputFieldController: UIViewController {
     func hideInput (completion:@escaping (AnyObject, _ finished:Bool) -> Void){
         
         UIView.animate(withDuration: 0.3, animations: {
-            self.topContainerBlurConstraint.constant = -self.getContainerHeight()
+            self.topContainerBlurConstraint.constant = -self.heightContainerConstraint-50
             self.view.layoutIfNeeded()
         }) {
            (finished) in

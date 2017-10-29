@@ -38,7 +38,8 @@ class ViewController: UIViewController, YWInputProtocol {
         //Optional, it will setup to Default setting
         alert!.setupContainer(_chooseBlurStyleEffectContainer: .dark, _chooseTitleColor: .white, _chooseMessageColor: .white, _chooseFontTitle: .boldSystemFont(ofSize: 15.0), _chooseFontMessage: .systemFont(ofSize: 12.0))
         
-        alert!.setContainer(_height: 250)
+        
+        alert!.setContainer(height: 400)
         inputText.delegate = self
         inputTextView.delegate = self
         
@@ -98,6 +99,8 @@ extension ViewController:UITextFieldDelegate{
         return true
         
     }
+    
+    
 }
 
 extension ViewController:UITextViewDelegate{

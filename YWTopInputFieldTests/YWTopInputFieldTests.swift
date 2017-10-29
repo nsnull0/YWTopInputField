@@ -68,4 +68,30 @@ class YWTopInputFieldTests: XCTestCase {
         
     }
     
+    func testContainerHeight() {
+        let dummyController = UIViewController()
+        let alertController = YWTopInputFieldController(_contentController: dummyController, _andDelegate: nil)
+        
+        alertController.setContainer(height: 190)
+        
+        alertController.showInput { (flag) in
+            
+        }
+        
+        XCTAssertEqual(alertController.heightConstraintContainerInputYWField.constant, 200)
+        
+        
+        alertController.hideInput { (obj, flag) in
+            
+        }
+        
+        alertController.setContainer(height: 400)
+        
+        alertController.showInput { (flag) in
+            
+        }
+        
+        XCTAssertEqual(alertController.heightConstraintContainerInputYWField.constant, 400)
+    }
+    
 }

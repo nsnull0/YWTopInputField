@@ -1,5 +1,5 @@
 # YWTopInputField
-[![CI Status](https://travis-ci.org/nsnull0/YWTopInputField.svg?branch=master)](https://travis-ci.org/nsnull0/YWTopInputField)
+
 [![Version](https://img.shields.io/cocoapods/v/YWTopInputField.svg?style=flat)](https://cocoapods.org/pods/YWTopInputField)
 [![License](https://img.shields.io/cocoapods/l/YWTopInputField.svg?style=flat)](https://cocoapods.org/pods/YWTopInputField)
 [![Platform](https://img.shields.io/cocoapods/p/YWTopInputField.svg?style=flat)](https://cocoapods.org/pods/YWTopInputField)
@@ -11,7 +11,7 @@ Will be more generic day by day
 ## Availability
 #### ⚠️ **This Library only Available to Swift > 3.0** ⚠️
 
-## DEMO V0.3.0
+## DEMO V0.4.0
 ![Demo](https://s7.postimg.org/fhodjzcsr/YWTop_Input_Field_1.gif)
 
 ## Installation
@@ -29,7 +29,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'YWTopInputField'
+    pod 'YWTopInputField', ~> "0.4"
 end
 ```
 
@@ -37,6 +37,16 @@ Then, run the following command:
 
 ```bash
 $ pod install
+```
+
+## Swift 4.0 Compatibility for more stable version
+```ruby
+platform :ios, '9.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+pod 'YWTopInputField', ~> "1.0"
+end
 ```
 
 ## Initialization
@@ -74,7 +84,7 @@ alert!.setupInputField(_chooseAutoCorrectionType: .no, _chooseSpellCheckingType:
 alert!.setupContainer(_chooseBlurStyleEffectContainer: .dark, _chooseTitleColor: .white, _chooseMessageColor: .white, _chooseFontTitle: .boldSystemFont(ofSize: 15.0), _chooseFontMessage: .systemFont(ofSize: 12.0))
 
 //Optional, it will setup to Default setting <200>
-alert!.setContainer(_height: 250)
+alert!.setContainer(height: 250)
 ```
 
 
