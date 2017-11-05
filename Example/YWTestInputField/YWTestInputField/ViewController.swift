@@ -33,13 +33,20 @@ class ViewController: UIViewController, YWInputProtocol {
         alert = YWTopInputFieldController(_contentController: self, _andDelegate: self)
         
         //Optional, it will setup to Default setting
-        alert!.setupInputField(_chooseAutoCorrectionType: .no, _chooseSpellCheckingType: .no, _chooseKeyboardType: .default, _chooseKeyboardAppearance: .alert)
+        //Change to Builder type, you could set 1 or more parameter at once. and don't forget to call validate() so your parameter is in correct state
+        alert!.customize.setCorrectionType(_type: .no)
+                        .setSpellCheckType(_type: .no)
+                        .setKeyboardType(_type: .default)
+                        .setKeyboardAppearance(_type: .alert)
+                        .setBlurStyleEffectContainer(_type: .dark)
+                        .setTitleColor(_color: .white)
+                        .setMessageColor(_color: .white)
+                        .setFontTitle(_font: .boldSystemFont(ofSize: 15.0))
+                        .setMessageFont(_font: .systemFont(ofSize: 12.0))
+                        .setHeightTextContainer(_height: 400)
+                        .validate()
         
-        //Optional, it will setup to Default setting
-        alert!.setupContainer(_chooseBlurStyleEffectContainer: .dark, _chooseTitleColor: .white, _chooseMessageColor: .white, _chooseFontTitle: .boldSystemFont(ofSize: 15.0), _chooseFontMessage: .systemFont(ofSize: 12.0))
         
-        
-        alert!.setContainer(height: 400)
         inputText.delegate = self
         inputTextView.delegate = self
         
@@ -89,6 +96,7 @@ extension ViewController:UITextFieldDelegate{
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         
         guard textField != self.inputText else {
+            self.alert!.customize.setKeyboardType(_type: .numberPad).validate()
             self.alert!.showInput(_withTitle: "", _andMessage: "", _withContentString: textField.text!, _withTag: tagIdentity.textFieldTag.rawValue, completion: {
                 (finished) in
                 

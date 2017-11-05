@@ -36,30 +36,14 @@ public class YWTopInputFieldController: UIViewController {
     private weak var root:UIViewController?
     
     
-    private var correctionType:UITextAutocorrectionType = .no
-    private var spellCheckType:UITextSpellCheckingType = .no
-    private var keyboardType:UIKeyboardType = .default
-    private var keyboardAppearance:UIKeyboardAppearance = .default
-    
-    
-    private var containerEffectType:UIBlurEffectStyle = .dark
-    private var titleColorText:UIColor = .white
-    private var messageColorText:UIColor = .white
-    private var titleFontText:UIFont = .boldSystemFont(ofSize: 15.0)
-    private var messageFontText:UIFont = .systemFont(ofSize: 12.0)
-    
-    
-    
-    private var heightContainerConstraint:CGFloat = 200
     private var addressTag:Int = 0
     
-    
-    
+    public var customize:YWTopInputFieldLogic = YWTopInputFieldLogic()
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         //version 2.0
-//        self.inputTextContainerYW.inputAccessoryView = accessoryOfYWInputField
+        //self.inputTextContainerYW.inputAccessoryView = accessoryOfYWInputField
         self.view.frame = CGRect(x: 0, y: 0, width: getScreenWidth(), height: getScreenHeight())
         self.inputAccessoryYWInputFieldPart.layer.opacity = 0
     }
@@ -91,31 +75,7 @@ public class YWTopInputFieldController: UIViewController {
         self.didMove(toParentViewController: self.root!)
         
         self.createPrivateObjectWithout()
-    }
-    
-    
-    //MARK: Setup Default Property
-    public func setupInputField(_chooseAutoCorrectionType correctionType:UITextAutocorrectionType, _chooseSpellCheckingType spellType:UITextSpellCheckingType, _chooseKeyboardType keyboardType:UIKeyboardType, _chooseKeyboardAppearance keyboardAppearance:UIKeyboardAppearance){
-        self.correctionType = correctionType
-        self.spellCheckType = spellType
-        self.keyboardType = keyboardType
-        self.keyboardAppearance = keyboardAppearance
-    }
-    
-    public func setupContainer(_chooseBlurStyleEffectContainer type:UIBlurEffectStyle, _chooseTitleColor colorTitle:UIColor, _chooseMessageColor colorMessage:UIColor, _chooseFontTitle fontTitle:UIFont, _chooseFontMessage fontMessage:UIFont){
-        self.containerEffectType = type
-        self.titleColorText = colorTitle
-        self.messageColorText = colorMessage
-        self.titleFontText = fontTitle
-        self.messageFontText = fontMessage
-    }
-    
-    public func setContainer(height value:CGFloat){
-        guard value >= 200 else {
-            return
-        }
-        heightContainerConstraint = value
-        self.view.layoutIfNeeded()
+        
     }
     
     //MARK: Animation and Interface
@@ -171,7 +131,7 @@ public class YWTopInputFieldController: UIViewController {
     func hideInput (completion:@escaping (AnyObject, _ finished:Bool) -> Void){
         
         UIView.animate(withDuration: 0.3, animations: {
-            self.topContainerBlurConstraint.constant = -self.heightContainerConstraint-50
+            self.topContainerBlurConstraint.constant = -self.customize.propertyYW.heightContainerConstraint-50
             self.view.layoutIfNeeded()
         }) {
            (finished) in
@@ -192,21 +152,21 @@ public class YWTopInputFieldController: UIViewController {
         
         self.view.setupLayoutConstraint_0_0_0_0_toParent()
         
-        self.inputTextContainerYW.autocorrectionType = self.correctionType
-        self.inputTextContainerYW.keyboardAppearance = self.keyboardAppearance
-        self.inputTextContainerYW.spellCheckingType = self.spellCheckType
-        self.inputTextContainerYW.keyboardType = self.keyboardType
+        self.inputTextContainerYW.autocorrectionType = self.customize.propertyYW.correctionType
+        self.inputTextContainerYW.keyboardAppearance = self.customize.propertyYW.keyboardAppearance
+        self.inputTextContainerYW.spellCheckingType = self.customize.propertyYW.spellCheckType
+        self.inputTextContainerYW.keyboardType = self.customize.propertyYW.keyboardType
         
 //        let visEffect:UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: self.containerEffectType))
 //        self.containerBlur.effect = visEffect.effect!
 //        self.inputAcessoryYWInputField.effect = visEffect.effect!
 //        self.inputAccessoryYWInputFieldPart.effect = visEffect.effect!
-        self.titleLabelYW.textColor = self.titleColorText
-        self.messageLabelYW.textColor = self.messageColorText
-        self.titleLabelYW.font = self.titleFontText
-        self.messageLabelYW.font = self.messageFontText
+        self.titleLabelYW.textColor = self.customize.propertyYW.titleColorText
+        self.messageLabelYW.textColor = self.customize.propertyYW.messageColorText
+        self.titleLabelYW.font = self.customize.propertyYW.titleFontText
+        self.messageLabelYW.font = self.customize.propertyYW.messageFontText
         
-        self.heightConstraintContainerInputYWField.constant = heightContainerConstraint
+        self.heightConstraintContainerInputYWField.constant = self.customize.propertyYW.heightContainerConstraint
     }
     
     func createPrivateObjectWithout(){
@@ -216,21 +176,21 @@ public class YWTopInputFieldController: UIViewController {
         
         self.view.setupLayoutConstraint_0_0_0_0_toParent()
         
-        self.inputTextContainerYW.autocorrectionType = self.correctionType
-        self.inputTextContainerYW.keyboardAppearance = self.keyboardAppearance
-        self.inputTextContainerYW.spellCheckingType = self.spellCheckType
-        self.inputTextContainerYW.keyboardType = self.keyboardType
+        self.inputTextContainerYW.autocorrectionType = self.customize.propertyYW.correctionType
+        self.inputTextContainerYW.keyboardAppearance = self.customize.propertyYW.keyboardAppearance
+        self.inputTextContainerYW.spellCheckingType = self.customize.propertyYW.spellCheckType
+        self.inputTextContainerYW.keyboardType = self.customize.propertyYW.keyboardType
         
         //        let visEffect:UIVisualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: self.containerEffectType))
         //        self.containerBlur.effect = visEffect.effect!
         //        self.inputAcessoryYWInputField.effect = visEffect.effect!
         //        self.inputAccessoryYWInputFieldPart.effect = visEffect.effect!
-        self.titleLabelYW.textColor = self.titleColorText
-        self.messageLabelYW.textColor = self.messageColorText
-        self.titleLabelYW.font = self.titleFontText
-        self.messageLabelYW.font = self.messageFontText
+        self.titleLabelYW.textColor = self.customize.propertyYW.titleColorText
+        self.messageLabelYW.textColor = self.customize.propertyYW.messageColorText
+        self.titleLabelYW.font = self.customize.propertyYW.titleFontText
+        self.messageLabelYW.font = self.customize.propertyYW.messageFontText
         
-        self.heightConstraintContainerInputYWField.constant = heightContainerConstraint
+        self.heightConstraintContainerInputYWField.constant = self.customize.propertyYW.heightContainerConstraint
         
         self.view.removeFromSuperview()
         self.removeFromParentViewController()

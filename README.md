@@ -49,6 +49,11 @@ pod 'YWTopInputField', ~> "1.0"
 end
 ```
 
+## Latest Version
+```ruby
+pod 'YWTopInputField', ~> "2.0"
+```
+
 ## Initialization
 ```swift
 
@@ -85,8 +90,36 @@ alert!.setupContainer(_chooseBlurStyleEffectContainer: .dark, _chooseTitleColor:
 
 //Optional, it will setup to Default setting <200>
 alert!.setContainer(height: 250)
+
 ```
 
+## Property Setup for Version > 2.0
+
+ADDED 'customize' property as builder object
+```swift
+alert!.customize.setCorrectionType(_type: .no)
+                .setSpellCheckType(_type: .no)
+                .setKeyboardType(_type: .default)
+                .setKeyboardAppearance(_type: .alert)
+                .setBlurStyleEffectContainer(_type: .dark)
+                .setTitleColor(_color: .white)
+                .setMessageColor(_color: .white)
+                .setFontTitle(_font: .boldSystemFont(ofSize: 15.0))
+                .setMessageFont(_font: .systemFont(ofSize: 12.0))
+                .setHeightTextContainer(_height: 400)
+                .validate()
+```
+
+SNAPSHOT EXAMPLE
+```swift
+
+self.alert!.customize.setKeyboardType(_type: .numberPad).validate()
+
+self.alert!.showInput(_withTitle: "", _andMessage: "", _withContentString: textField.text!, _withTag:           tagIdentity.textFieldTag.rawValue, completion: {
+(finished) in
+
+})
+```
 
 ## Support
 - Updated occasionally for more Generic and developer-friendly

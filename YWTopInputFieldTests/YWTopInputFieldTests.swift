@@ -72,7 +72,7 @@ class YWTopInputFieldTests: XCTestCase {
         let dummyController = UIViewController()
         let alertController = YWTopInputFieldController(_contentController: dummyController, _andDelegate: nil)
         
-        alertController.setContainer(height: 190)
+        alertController.customize.setHeightTextContainer(_height: 190).validate()
         
         alertController.showInput { (flag) in
             
@@ -85,7 +85,7 @@ class YWTopInputFieldTests: XCTestCase {
             
         }
         
-        alertController.setContainer(height: 400)
+        alertController.customize.setHeightTextContainer(_height: 400).validate()
         
         alertController.showInput { (flag) in
             
