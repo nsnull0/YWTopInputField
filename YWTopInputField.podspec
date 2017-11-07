@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
     s.name         = "YWTopInputField"
-    s.version      = "2.0"
+    s.version      = "2.1"
     s.summary      = "YWTopInputField Generic Functionality String"
-    s.description  = "Input Top Field with Generic input type, Updated version 2.0 for New Easier Version to change property"
+    s.description  = "Input Top Field with Generic input type, Updated version > 2.0 for New Easier Version to change property"
     s.requires_arc = true
     s.homepage     = "https://github.com/nsnull0/YWTopInputField"
     s.license      = { :type => "MIT", :file => "LICENSE" }
